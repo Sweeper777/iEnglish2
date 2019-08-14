@@ -7,7 +7,7 @@ target 'iEnglish2' do
 
   # Pods for iEnglish2
   pod 'SwiftyUtils', :git => 'https://github.com/tbaranes/SwiftyUtils.git', :commit => 'adf37824622a46190aef33be686163311888a3c9'
-  pod 'SCLAlertView'
+  pod 'SCLAlertView' , :git => 'https://github.com/vikmeup/SCLAlertView-Swift.git'
   pod 'EmptyDataSet-Swift'
   pod 'RxSwift'
   pod 'RxCocoa'

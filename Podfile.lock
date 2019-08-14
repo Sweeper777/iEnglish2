@@ -16,7 +16,7 @@ PODS:
   - RxRelay (5.0.0):
     - RxSwift (~> 5)
   - RxSwift (5.0.0)
-  - SCLAlertView (0.8)
+  - SCLAlertView (0.8.1)
   - SnapKit (5.0.1)
   - SwiftyButton (0.8.2)
   - SwiftyUtils (4.0.0)
@@ -27,7 +27,7 @@ DEPENDENCIES:
   - RxCocoa
   - RxDataSources
   - RxSwift
-  - SCLAlertView
+  - SCLAlertView (from `https://github.com/vikmeup/SCLAlertView-Swift.git`)
   - SnapKit
   - SwiftyButton
   - SwiftyUtils (from `https://github.com/tbaranes/SwiftyUtils.git`, commit `adf37824622a46190aef33be686163311888a3c9`)
@@ -42,16 +42,20 @@ SPEC REPOS:
     - RxDataSources
     - RxRelay
     - RxSwift
-    - SCLAlertView
     - SnapKit
     - SwiftyButton
 
 EXTERNAL SOURCES:
+  SCLAlertView:
+    :git: https://github.com/vikmeup/SCLAlertView-Swift.git
   SwiftyUtils:
     :commit: adf37824622a46190aef33be686163311888a3c9
     :git: https://github.com/tbaranes/SwiftyUtils.git
 
 CHECKOUT OPTIONS:
+  SCLAlertView:
+    :commit: f76bb0306b4c73523ca64100b0e3f2ad6896cee2
+    :git: https://github.com/vikmeup/SCLAlertView-Swift.git
   SwiftyUtils:
     :commit: adf37824622a46190aef33be686163311888a3c9
     :git: https://github.com/tbaranes/SwiftyUtils.git
@@ -65,11 +69,11 @@ SPEC CHECKSUMS:
   RxDataSources: efee07fa4de48477eca0a4611e6d11e2da9c1114
   RxRelay: 4f7409406a51a55cd88483f21ed898c234d60f18
   RxSwift: 8b0671caa829a763bbce7271095859121cbd895f
-  SCLAlertView: 6a77bb2edfc65e04dbe57725546cb4107a506b85
+  SCLAlertView: 776813fb1f62248965f37cb7edf4088ee6394460
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   SwiftyButton: 5b0ef314e9cf61cf8a83e456ddd1ea1f53f30598
   SwiftyUtils: e2c0b1fd674684e1083c894f6a71a64bb9617402
 
-PODFILE CHECKSUM: 23f1b1192086aeb10c5d17d311c157fd696ba040
+PODFILE CHECKSUM: eaba6cba0124c2083220cdc4eda8b9b09446778d
 
 COCOAPODS: 1.7.5
