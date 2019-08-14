@@ -9,3 +9,12 @@ class PlaylistObject: Object {
     @objc dynamic var name = ""
 }
 
+struct Utterance {
+    let string: String
+}
+
+struct Playlist {
+    let items: [Utterance]
+    let name: String
+}
+
