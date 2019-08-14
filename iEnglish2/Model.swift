@@ -18,3 +18,25 @@ struct Playlist {
     let name: String
 }
 
+extension UtteranceObject {
+    var utterance: Utterance {
+        return Utterance(string: string)
+    }
+    
+    convenience init(from utterance: Utterance) {
+        self.init()
+        string = utterance.string
+    }
+}
+
+extension PlaylistObject {
+    var playlist: Playlist {
+        return Playlist(items: items.map { $0.utterance }, name: name)
+    }
+    
+    convenience init(from playlist: Playlist) {
+        self.init()
+        name = playlist.name
+        items.append(objectsIn: playlist.items.map(UtteranceObject.init(from:)))
+    }
+}
