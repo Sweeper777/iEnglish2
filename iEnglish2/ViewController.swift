@@ -8,10 +8,16 @@ class ViewController: UIViewController {
     @IBOutlet var playButton: PressableButton!
     
     override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        playButton.snp.makeConstraints { (make) in
+            make.center.equalToSuperview()
+        }
+        
+        textField.snp.makeConstraints { (make) in
+            make.bottom.equalTo(playButton.snp.top).offset(-8)
+            make.left.equalTo(view.safeAreaInsets.left).offset(8)
+            make.right.equalTo(view.safeAreaInsets.right).offset(-8)
+        }
     }
-
-
 }
 
