@@ -28,12 +28,21 @@ struct Playlist {
 
 extension UtteranceObject {
     var utterance: Utterance {
-        return Utterance(string: string)
+        return Utterance(
+            string: string,
+            rate: rate,
+            pitch: pitch,
+            volume: volume,
+            language: language)
     }
     
     convenience init(from utterance: Utterance) {
         self.init()
         string = utterance.string
+        rate = utterance.rate
+        pitch = utterance.pitch
+        volume = utterance.volume
+        language = utterance.language
     }
 }
 
