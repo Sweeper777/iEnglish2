@@ -24,7 +24,6 @@ class ViewController: UIViewController {
         
         playButton.addTarget(self, action: #selector(playPress), for: .touchUpInside)
         
-        print(AVSpeechUtteranceDefaultSpeechRate)
     }
     
     @objc func playPress() {
