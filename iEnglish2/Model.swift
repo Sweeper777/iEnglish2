@@ -1,4 +1,5 @@
 import RealmSwift
+import AVFoundation
 
 class UtteranceObject: Object {
     @objc dynamic var string = ""
@@ -55,5 +56,16 @@ extension PlaylistObject {
         self.init()
         name = playlist.name
         items.append(objectsIn: playlist.items.map(UtteranceObject.init(from:)))
+    }
+}
+
+extension Utterance {
+    var avUtterance: AVSpeechUtterance {
+        let utterance = AVSpeechUtterance(string: string)
+        utterance.rate = rate
+        utterance.pitchMultiplier = pitch
+        utterance.volume = volume
+        utterance.voice = AVSpeechSynthesisVoice(language: language)
+        return utterance
     }
 }
