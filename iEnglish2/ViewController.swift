@@ -1,6 +1,7 @@
 import UIKit
 import SwiftyButton
 import SnapKit
+import AVFoundation
 
 class ViewController: UIViewController {
 
@@ -20,6 +21,16 @@ class ViewController: UIViewController {
             make.left.equalTo(view.safeAreaInsets.left).offset(8)
             make.right.equalTo(view.safeAreaInsets.right).offset(-8)
         }
+        
+        playButton.addTarget(self, action: #selector(playPress), for: .touchUpInside)
+        
+    }
+    
+    @objc func playPress() {
+        let synthesiser = AVSpeechSynthesizer()
+        let utterance = AVSpeechUtterance(string: textField.text ?? "")
+        utterance.voice = AVSpeechSynthesisVoice(language: "en-GB")
+        synthesiser.speak(utterance)
     }
 }
 
