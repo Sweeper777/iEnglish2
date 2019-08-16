@@ -11,6 +11,8 @@ class ViewController: UIViewController {
         
         playButton.snp.makeConstraints { (make) in
             make.center.equalToSuperview()
+            make.width.equalTo(94)
+            make.height.equalTo(54)
         }
         
         textField.snp.makeConstraints { (make) in
