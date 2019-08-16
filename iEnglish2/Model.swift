@@ -2,6 +2,10 @@ import RealmSwift
 
 class UtteranceObject: Object {
     @objc dynamic var string = ""
+    @objc dynamic var rate: Float = 0.5
+    @objc dynamic var pitch: Float = 1
+    @objc dynamic var volume: Float = 0.0
+    @objc dynamic var language = "en-GB"
 }
 
 class PlaylistObject: Object {
@@ -11,6 +15,10 @@ class PlaylistObject: Object {
 
 struct Utterance {
     let string: String
+    let rate: Float
+    let pitch: Float
+    let volume: Float
+    let language: String
 }
 
 struct Playlist {
