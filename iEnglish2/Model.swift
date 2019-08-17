@@ -22,6 +22,13 @@ struct Utterance {
     let language: String
 }
 
+struct UtteranceSettings {
+    let rate: Float
+    let pitch: Float
+    let volume: Float
+    let language: String
+}
+
 struct Playlist {
     let items: [Utterance]
     let name: String
