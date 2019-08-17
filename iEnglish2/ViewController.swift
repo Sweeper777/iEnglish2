@@ -31,5 +31,9 @@ class ViewController: UIViewController {
         utterance.voice = AVSpeechSynthesisVoice(language: "en-GB")
         synthesiser.speak(utterance)
     }
+    
+    @objc func playPress() {
+            play()
+    }
 }
 
