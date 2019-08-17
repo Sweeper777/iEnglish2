@@ -23,10 +23,9 @@ class ViewController: UIViewController {
         }
         
         playButton.addTarget(self, action: #selector(playPress), for: .touchUpInside)
-        
     }
     
-    @objc func playPress() {
+    func play() {
         let synthesiser = AVSpeechSynthesizer()
         let utterance = AVSpeechUtterance(string: textField.text ?? "")
         utterance.voice = AVSpeechSynthesisVoice(language: "en-GB")
