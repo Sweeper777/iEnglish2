@@ -16,6 +16,8 @@
 		5A004A562303A5D700CCF20E /* iEnglish2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A004A552303A5D700CCF20E /* iEnglish2Tests.swift */; };
 		5A00745D2304D2A90004C3CF /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A00745C2304D2A90004C3CF /* Model.swift */; };
 		5A04F3212307A0F60035F78F /* LanguageDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A04F3202307A0F60035F78F /* LanguageDetector.swift */; };
+		5A04F3232307AF370035F78F /* UtteranceSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A04F3222307AF370035F78F /* UtteranceSettingsView.swift */; };
+		5A04F3252307AF6E0035F78F /* UtteranceSettingsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A04F3242307AF6E0035F78F /* UtteranceSettingsView.xib */; };
 		BFCC3C84CFDB8F40EC48483F /* Pods_iEnglish2Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5657980F40EA74B39581D14F /* Pods_iEnglish2Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +47,8 @@
 		5A004A572303A5D700CCF20E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A00745C2304D2A90004C3CF /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		5A04F3202307A0F60035F78F /* LanguageDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageDetector.swift; sourceTree = "<group>"; };
+		5A04F3222307AF370035F78F /* UtteranceSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtteranceSettingsView.swift; sourceTree = "<group>"; };
+		5A04F3242307AF6E0035F78F /* UtteranceSettingsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UtteranceSettingsView.xib; sourceTree = "<group>"; };
 		6508BC52BA7B770488ED6246 /* Pods-iEnglish2Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iEnglish2Tests.debug.xcconfig"; path = "Target Support Files/Pods-iEnglish2Tests/Pods-iEnglish2Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		77E4D157559E92456D436E45 /* Pods-iEnglish2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iEnglish2.debug.xcconfig"; path = "Target Support Files/Pods-iEnglish2/Pods-iEnglish2.debug.xcconfig"; sourceTree = "<group>"; };
 		C5F78074BF28E7DB70519112 /* Pods-iEnglish2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iEnglish2.release.xcconfig"; path = "Target Support Files/Pods-iEnglish2/Pods-iEnglish2.release.xcconfig"; sourceTree = "<group>"; };
@@ -103,6 +107,8 @@
 			isa = PBXGroup;
 			children = (
 				5A004A402303A5D500CCF20E /* AppDelegate.swift */,
+				5A04F3222307AF370035F78F /* UtteranceSettingsView.swift */,
+				5A04F3242307AF6E0035F78F /* UtteranceSettingsView.xib */,
 				5A004A422303A5D500CCF20E /* ViewController.swift */,
 				5A004A442303A5D500CCF20E /* Main.storyboard */,
 				5A00745C2304D2A90004C3CF /* Model.swift */,
@@ -219,6 +225,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A004A4B2303A5D600CCF20E /* LaunchScreen.storyboard in Resources */,
+				5A04F3252307AF6E0035F78F /* UtteranceSettingsView.xib in Resources */,
 				5A004A482303A5D600CCF20E /* Assets.xcassets in Resources */,
 				5A004A462303A5D500CCF20E /* Main.storyboard in Resources */,
 			);
@@ -304,6 +311,7 @@
 			files = (
 				5A00745D2304D2A90004C3CF /* Model.swift in Sources */,
 				5A004A432303A5D500CCF20E /* ViewController.swift in Sources */,
+				5A04F3232307AF370035F78F /* UtteranceSettingsView.swift in Sources */,
 				5A004A412303A5D500CCF20E /* AppDelegate.swift in Sources */,
 				5A04F3212307A0F60035F78F /* LanguageDetector.swift in Sources */,
 			);
