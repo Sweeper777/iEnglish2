@@ -75,4 +75,8 @@ extension Utterance {
         utterance.voice = AVSpeechSynthesisVoice(language: language)
         return utterance
     }
+    
+    init(string: String, settings: UtteranceSettings) {
+        self.init(string: string, rate: settings.rate, pitch: settings.pitch, volume: settings.volume, language: settings.language)
+    }
 }
