@@ -8,6 +8,22 @@ class UtteranceSettingsView: UIView {
     @IBOutlet var volumeSlider: UISlider!
     @IBOutlet var languageSegmentedControl: UISegmentedControl!
     
+    var utteranceSettings: UtteranceSettings {
+        get {
+            return UtteranceSettings(
+                rate: rateSlider.value,
+                pitch: pitchSlider.value,
+                volume: volumeSlider.value,
+                language: languageSegmentedControl.selectedSegmentIndex == 1 ? "en-US" : "en-GB")
+        }
+        set {
+            rateSlider.value = newValue.rate
+            pitchSlider.value = newValue.pitch
+            volumeSlider.value = newValue.volume
+            languageSegmentedControl.selectedSegmentIndex = newValue.language == "en-US" ? 1 : 0
+        }
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()
