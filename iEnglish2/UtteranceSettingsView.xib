@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UtteranceSettingsView" customModule="iEnglish2" customModuleProvider="target">
             <connections>
+                <outlet property="contentView" destination="pXP-s2-39n" id="8OV-gv-Z09"/>
                 <outlet property="languageSegmentedControl" destination="STI-4N-owy" id="jKF-B1-dSG"/>
                 <outlet property="pitchSlider" destination="J6H-68-vda" id="CJK-Gq-CRd"/>
                 <outlet property="rateSlider" destination="a5m-ic-fhj" id="Jl7-ne-wgu"/>
