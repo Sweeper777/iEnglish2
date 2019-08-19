@@ -18,26 +18,43 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="输入点儿英语吧..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GzJ-Xl-xoi">
-                                <rect key="frame" x="16" y="244" width="288" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="输入点儿英语吧..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y3z-s4-Nzs">
+                                <rect key="frame" x="16" y="91" width="288" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t0V-kB-Qgz" customClass="PressableButton" customModule="SwiftyButton">
-                                <rect key="frame" x="123" y="280" width="74" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GfZ-nU-eBI" customClass="PressableButton" customModule="SwiftyButton">
+                                <rect key="frame" x="113" y="137" width="94" height="54"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="0nr-Ze-s1H"/>
+                                    <constraint firstAttribute="width" constant="94" id="EhH-rB-bMl"/>
+                                </constraints>
                                 <state key="normal" title="读来听听"/>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yqD-J7-e0i" customClass="UtteranceSettingsView" customModule="iEnglish2" customModuleProvider="target">
+                                <rect key="frame" x="16" y="199" width="288" height="279"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="yqD-J7-e0i" secondAttribute="bottom" constant="41" id="5ry-ZM-i4S"/>
+                            <constraint firstItem="GfZ-nU-eBI" firstAttribute="top" secondItem="Y3z-s4-Nzs" secondAttribute="bottom" constant="16" id="9Jk-SF-r38"/>
+                            <constraint firstItem="yqD-J7-e0i" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="9aL-IC-E8k"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yqD-J7-e0i" secondAttribute="trailing" constant="16" id="Uy7-dl-wMa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Y3z-s4-Nzs" secondAttribute="trailing" constant="16" id="crE-9F-ajB"/>
+                            <constraint firstItem="Y3z-s4-Nzs" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="27" id="hhP-Mk-wxm"/>
+                            <constraint firstItem="yqD-J7-e0i" firstAttribute="top" secondItem="GfZ-nU-eBI" secondAttribute="bottom" constant="8" id="ky3-iK-ucd"/>
+                            <constraint firstItem="GfZ-nU-eBI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oG6-VE-3UI"/>
+                            <constraint firstItem="Y3z-s4-Nzs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="rLl-yb-QAJ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="76r-Gj-G79"/>
                     <connections>
-                        <outlet property="playButton" destination="t0V-kB-Qgz" id="aOR-6u-EGB"/>
-                        <outlet property="textField" destination="GzJ-Xl-xoi" id="1TP-ya-CvT"/>
+                        <outlet property="playButton" destination="GfZ-nU-eBI" id="n5Q-pe-Mk4"/>
+                        <outlet property="textField" destination="Y3z-s4-Nzs" id="2pH-4E-oeg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -69,6 +86,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="ftZ-sl-6hG" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ofg-2n-cyw">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
