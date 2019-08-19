@@ -12,18 +12,6 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         
-        playButton.snp.makeConstraints { (make) in
-            make.center.equalToSuperview()
-            make.width.equalTo(94)
-            make.height.equalTo(54)
-        }
-        
-        textField.snp.makeConstraints { (make) in
-            make.bottom.equalTo(playButton.snp.top).offset(-8)
-            make.left.equalTo(view.safeAreaInsets.left).offset(8)
-            make.right.equalTo(view.safeAreaInsets.right).offset(-8)
-        }
-        
         playButton.addTarget(self, action: #selector(playPress), for: .touchUpInside)
         let keyboardToolbar = UIToolbar()
         keyboardToolbar.isTranslucent = false
