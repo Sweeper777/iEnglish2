@@ -25,6 +25,13 @@ class ViewController: UIViewController {
         }
         
         playButton.addTarget(self, action: #selector(playPress), for: .touchUpInside)
+        let keyboardToolbar = UIToolbar()
+        keyboardToolbar.isTranslucent = false
+        keyboardToolbar.items = [
+            UIBarButtonItem(barButtonSystemItem: .done, target: textField, action: #selector(UITextField.resignFirstResponder)),
+        ]
+        keyboardToolbar.sizeToFit()
+        textField.inputAccessoryView = keyboardToolbar
     }
     
     func play() {
