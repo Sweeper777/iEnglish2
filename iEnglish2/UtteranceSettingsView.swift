@@ -49,5 +49,8 @@ class UtteranceSettingsView: UIView {
         pitchSlider.maximumValue = 2
         pitchSlider.value = 1
         
+        volumeSlider.minimumValue = 0
+        volumeSlider.maximumValue = 1
+        volumeSlider.value = 1
     }
 }
