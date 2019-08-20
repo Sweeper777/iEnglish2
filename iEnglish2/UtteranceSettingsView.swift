@@ -45,5 +45,9 @@ class UtteranceSettingsView: UIView {
         rateSlider.maximumValue = AVSpeechUtteranceMaximumSpeechRate
         rateSlider.value = AVSpeechUtteranceDefaultSpeechRate
         
+        pitchSlider.minimumValue = 0.5
+        pitchSlider.maximumValue = 2
+        pitchSlider.value = 1
+        
     }
 }
