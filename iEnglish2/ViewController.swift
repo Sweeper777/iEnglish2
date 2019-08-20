@@ -25,8 +25,7 @@ class ViewController: UIViewController {
     
     func play() {
         let synthesiser = AVSpeechSynthesizer()
-        let utterance = AVSpeechUtterance(string: textField.text ?? "")
-        utterance.voice = AVSpeechSynthesisVoice(language: "en-GB")
+        let utterance = Utterance(string: textField.text ?? "", settings: utteranceSettingsView.utteranceSettings).avUtterance
         synthesiser.speak(utterance)
     }
     
