@@ -9,6 +9,7 @@ class ViewController: UIViewController {
 
     @IBOutlet var textField: UITextField!
     @IBOutlet var playButton: PressableButton!
+    @IBOutlet var utteranceSettingsView: UtteranceSettingsView!
     
     override func viewDidLoad() {
         

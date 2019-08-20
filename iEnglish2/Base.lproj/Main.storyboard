@@ -55,6 +55,7 @@
                     <connections>
                         <outlet property="playButton" destination="GfZ-nU-eBI" id="n5Q-pe-Mk4"/>
                         <outlet property="textField" destination="Y3z-s4-Nzs" id="2pH-4E-oeg"/>
+                        <outlet property="utteranceSettingsView" destination="yqD-J7-e0i" id="zsS-VG-jr3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
