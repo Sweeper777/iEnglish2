@@ -1,4 +1,5 @@
 import UIKit
+import AVFoundation
 
 class UtteranceSettingsView: UIView {
     @IBOutlet var contentView: UIView!
@@ -39,5 +40,10 @@ class UtteranceSettingsView: UIView {
         addSubview(contentView)
         contentView.frame = bounds
         contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        
+        rateSlider.minimumValue = AVSpeechUtteranceMinimumSpeechRate
+        rateSlider.maximumValue = AVSpeechUtteranceMaximumSpeechRate
+        rateSlider.value = AVSpeechUtteranceDefaultSpeechRate
+        
     }
 }
