@@ -14,3 +14,13 @@ class PlaylistController: UITableViewController {
     var playlists: BehaviorRelay<[Playlist]> = BehaviorRelay(value: [])
     
 }
+
+extension Playlist : IdentifiableType, Equatable {
+    typealias Identity = String
+    
+    var identity: String { return name }
+    
+    static func ==(lhs: Playlist, rhs: Playlist) -> Bool {
+        return lhs.name == rhs.name
+    }
+}
