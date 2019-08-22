@@ -16,6 +16,14 @@ class PlaylistController: UITableViewController {
     override func viewDidLoad() {
         tableView.dataSource = nil
         
+        tableView.emptyDataSetView { (view) in
+            view.titleLabelString(NSAttributedString(string: "什么也没有"))
+            view.verticalOffset(-70)
+            view.image(UIImage(named: "icons8-personal_video_recorder_menu"))
+            view.detailLabelString(NSAttributedString(string: "点击\"+\"来新建播放列表吧!"))
+            view.shouldBeForcedToDisplay(false)
+            view.shouldDisplay(true)
+        }
         
         playlistObjects = RealmWrapper.shared.playlists
         
