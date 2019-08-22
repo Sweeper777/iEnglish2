@@ -38,6 +38,18 @@ class PlaylistController: UITableViewController {
         
         playlists.accept(playlistObjects.map { $0.playlist })
         
+        
+    }
+    
+    @IBAction func addPress() {
+        func validatePlaylistName(_ name: String?) -> Bool {
+            if (name?.trimmed()).isNilOrEmpty {
+                let alert = SCLAlertView(appearance: SCLAlertView.SCLAppearance(showCloseButton: false))
+                alert.addButton("确定", action: {})
+                alert.showWarning("播放列表名不能为空!")
+                return false
+            }
+        }
     }
 }
 
