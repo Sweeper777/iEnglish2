@@ -13,6 +13,18 @@ class PlaylistController: UITableViewController {
     var playlistObjects: Results<PlaylistObject>!
     var playlists: BehaviorRelay<[Playlist]> = BehaviorRelay(value: [])
     
+    override func viewDidLoad() {
+        tableView.dataSource = nil
+        
+        let observable = playlists.asObservable().map { [PlaylistSection(items: $0)] }
+        let datasource = RxTableViewSectionedAnimatedDataSource<PlaylistSection>(configureCell: {
+            (datasource, tableView, indexPath, playlist) -> UITableViewCell in
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cell")!
+            cell.textLabel?.text = playlist.name
+            return cell
+        })
+        observable.bind(to: tableView.rx.items(dataSource: datasource)).disposed(by: disposeBag)
+    }
 }
 
 struct PlaylistSection : AnimatableSectionModelType, IdentifiableType {
