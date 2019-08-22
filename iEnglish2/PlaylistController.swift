@@ -15,6 +15,26 @@ class PlaylistController: UITableViewController {
     
 }
 
+struct PlaylistSection : AnimatableSectionModelType, IdentifiableType {
+    typealias Identity = String
+    var identity: String {
+        return ""
+    }
+    
+    typealias Item = Playlist
+    
+    var items: [Playlist]
+    
+    init(original: PlaylistSection, items: [Playlist]) {
+        self = original
+        self.items = items
+    }
+    
+    init(items: [Playlist]) {
+        self.items = items
+    }
+}
+
 extension Playlist : IdentifiableType, Equatable {
     typealias Identity = String
     
