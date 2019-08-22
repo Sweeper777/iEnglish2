@@ -16,6 +16,9 @@ class PlaylistController: UITableViewController {
     override func viewDidLoad() {
         tableView.dataSource = nil
         
+        
+        playlistObjects = RealmWrapper.shared.playlists
+        
         let observable = playlists.asObservable().map { [PlaylistSection(items: $0)] }
         let datasource = RxTableViewSectionedAnimatedDataSource<PlaylistSection>(configureCell: {
             (datasource, tableView, indexPath, playlist) -> UITableViewCell in
@@ -24,6 +27,9 @@ class PlaylistController: UITableViewController {
             return cell
         })
         observable.bind(to: tableView.rx.items(dataSource: datasource)).disposed(by: disposeBag)
+        
+        playlists.accept(playlistObjects.map { $0.playlist })
+        
     }
 }
 
