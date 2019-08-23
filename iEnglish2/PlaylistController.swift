@@ -49,6 +49,13 @@ class PlaylistController: UITableViewController {
                 alert.showWarning("播放列表名不能为空!")
                 return false
             }
+            if playlistObjects.filter(NSPredicate(format: "name == %@", name!)).count > 0 {
+                let alert = SCLAlertView(appearance: SCLAlertView.SCLAppearance(showCloseButton: false))
+                alert.addButton("确定", action: {})
+                alert.showWarning("播放列表名不能重复!")
+                return false
+            }
+            return true
         }
     }
 }
