@@ -38,6 +38,7 @@ class PlaylistController: UITableViewController {
         
         playlists.accept(playlistObjects.map { $0.playlist })
         
+        navigationItem.rightBarButtonItems?.insert(editButtonItem, at: 0)
         
     }
     
