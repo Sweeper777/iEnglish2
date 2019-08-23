@@ -57,6 +57,21 @@ class PlaylistController: UITableViewController {
             }
             return true
         }
+        
+        let prompt = SCLAlertView(appearance: SCLAlertView.SCLAppearance(showCloseButton: false))
+        let textfield = prompt.addTextField("播放列表名")
+        prompt.addButton("确定") { [weak self] in
+            guard let `self` = self else { return }
+            guard validatePlaylistName(textfield.text) else { return }
+            let playlist = PlaylistObject()
+            playlist.name = textfield.text!
+            try? RealmWrapper.shared.realm.write {
+                RealmWrapper.shared.realm.add(playlist)
+            }
+            self.playlists.accept(self.playlistObjects.map { $0.playlist })
+        }
+        prompt.addButton("取消", action: {})
+        prompt.showEdit("输入播放列表名:")
     }
 }
 
