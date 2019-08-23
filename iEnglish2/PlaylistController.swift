@@ -73,6 +73,19 @@ class PlaylistController: UITableViewController {
         prompt.addButton("取消", action: {})
         prompt.showEdit("输入播放列表名:")
     }
+    
+    override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        return .delete
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        let playlistObjectToDelete = playlistObjects[indexPath.row]
+        try? RealmWrapper.shared.realm.write {
+            RealmWrapper.shared.realm.delete(playlistObjectToDelete)
+        }
+        playlists.accept(playlistObjects.map { $0.playlist })
+    }
+    
 }
 
 struct PlaylistSection : AnimatableSectionModelType, IdentifiableType {
