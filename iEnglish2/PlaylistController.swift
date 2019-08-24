@@ -15,6 +15,7 @@ class PlaylistController: UITableViewController {
     
     override func viewDidLoad() {
         tableView.dataSource = nil
+        tableView.tableFooterView = UIView()
         
         tableView.emptyDataSetView { (view) in
             view.titleLabelString(NSAttributedString(string: "什么也没有"))
