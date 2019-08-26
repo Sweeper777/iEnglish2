@@ -38,6 +38,16 @@ class PlaylistController: UITableViewController {
         datasource.canEditRowAtIndexPath = { _, _ in return true }
         observable.bind(to: tableView.rx.items(dataSource: datasource)).disposed(by: disposeBag)
         
+        tableView.rx.itemDeleted.subscribe(onNext: {
+            [weak self] indexPath in
+            guard let `self` = self else { return }
+            let playlistObjectToDelete = self.playlistObjects[indexPath.row]
+            try? RealmWrapper.shared.realm.write {
+                RealmWrapper.shared.realm.delete(playlistObjectToDelete)
+            }
+            self.playlists.accept(self.playlistObjects.map { $0.playlist })
+        }).disposed(by: disposeBag)
+        
         playlists.accept(playlistObjects.map { $0.playlist })
         
         navigationItem.rightBarButtonItems?.insert(editButtonItem, at: 0)
@@ -79,14 +89,6 @@ class PlaylistController: UITableViewController {
         }
         prompt.addButton("取消", action: {})
         prompt.showEdit("输入播放列表名:")
-    }
-    
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        let playlistObjectToDelete = playlistObjects[indexPath.row]
-        try? RealmWrapper.shared.realm.write {
-            RealmWrapper.shared.realm.delete(playlistObjectToDelete)
-        }
-        playlists.accept(playlistObjects.map { $0.playlist })
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
