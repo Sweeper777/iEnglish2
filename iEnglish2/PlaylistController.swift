@@ -92,6 +92,11 @@ class PlaylistController: UITableViewController {
         playlists.accept(playlistObjects.map { $0.playlist })
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let vc = segue.destination as? PlaylistItemsController, let playlist = sender as? Playlist {
+            vc.playlist = playlist
+        }
+    }
 }
 
 struct PlaylistSection : AnimatableSectionModelType, IdentifiableType {
