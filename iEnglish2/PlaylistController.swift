@@ -35,6 +35,7 @@ class PlaylistController: UITableViewController {
             cell.textLabel?.text = playlist.name
             return cell
         })
+        datasource.canEditRowAtIndexPath = { _, _ in return true }
         observable.bind(to: tableView.rx.items(dataSource: datasource)).disposed(by: disposeBag)
         
         playlists.accept(playlistObjects.map { $0.playlist })
@@ -78,10 +79,6 @@ class PlaylistController: UITableViewController {
         }
         prompt.addButton("取消", action: {})
         prompt.showEdit("输入播放列表名:")
-    }
-    
-    override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
-        return .delete
     }
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
