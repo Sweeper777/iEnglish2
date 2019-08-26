@@ -41,6 +41,10 @@ class PlaylistController: UITableViewController {
         
         navigationItem.rightBarButtonItems?.insert(editButtonItem, at: 0)
         
+        tableView.rx.modelSelected(Playlist.self).subscribe(onNext: {
+            [weak self] playlist in
+            self?.performSegue(withIdentifier: "showPlaylist", sender: playlist)
+        }).disposed(by: disposeBag)
     }
     
     @IBAction func addPress() {
