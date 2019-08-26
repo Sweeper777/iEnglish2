@@ -15,6 +15,7 @@
 		5A004A4B2303A5D600CCF20E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A004A492303A5D600CCF20E /* LaunchScreen.storyboard */; };
 		5A004A562303A5D700CCF20E /* iEnglish2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A004A552303A5D700CCF20E /* iEnglish2Tests.swift */; };
 		5A00745D2304D2A90004C3CF /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A00745C2304D2A90004C3CF /* Model.swift */; };
+		5A03FDBE2313745A000BAF99 /* PlaylistItemsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A03FDBD2313745A000BAF99 /* PlaylistItemsController.swift */; };
 		5A04F3212307A0F60035F78F /* LanguageDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A04F3202307A0F60035F78F /* LanguageDetector.swift */; };
 		5A04F3232307AF370035F78F /* UtteranceSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A04F3222307AF370035F78F /* UtteranceSettingsView.swift */; };
 		5A04F3252307AF6E0035F78F /* UtteranceSettingsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A04F3242307AF6E0035F78F /* UtteranceSettingsView.xib */; };
@@ -48,6 +49,7 @@
 		5A004A552303A5D700CCF20E /* iEnglish2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iEnglish2Tests.swift; sourceTree = "<group>"; };
 		5A004A572303A5D700CCF20E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A00745C2304D2A90004C3CF /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		5A03FDBD2313745A000BAF99 /* PlaylistItemsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistItemsController.swift; sourceTree = "<group>"; };
 		5A04F3202307A0F60035F78F /* LanguageDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageDetector.swift; sourceTree = "<group>"; };
 		5A04F3222307AF370035F78F /* UtteranceSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtteranceSettingsView.swift; sourceTree = "<group>"; };
 		5A04F3242307AF6E0035F78F /* UtteranceSettingsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UtteranceSettingsView.xib; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 				5A04F3242307AF6E0035F78F /* UtteranceSettingsView.xib */,
 				5A004A422303A5D500CCF20E /* ViewController.swift */,
 				5AFC75C2230A3D44002FFA6F /* PlaylistController.swift */,
+				5A03FDBD2313745A000BAF99 /* PlaylistItemsController.swift */,
 				5A004A442303A5D500CCF20E /* Main.storyboard */,
 				5A00745C2304D2A90004C3CF /* Model.swift */,
 				5A04F3202307A0F60035F78F /* LanguageDetector.swift */,
@@ -315,6 +318,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A03FDBE2313745A000BAF99 /* PlaylistItemsController.swift in Sources */,
 				5A00745D2304D2A90004C3CF /* Model.swift in Sources */,
 				5A004A432303A5D500CCF20E /* ViewController.swift in Sources */,
 				5A04F3232307AF370035F78F /* UtteranceSettingsView.swift in Sources */,
