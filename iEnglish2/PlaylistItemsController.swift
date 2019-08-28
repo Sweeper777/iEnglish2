@@ -1,5 +1,5 @@
 import UIKit
 
 class PlaylistItemsController: UITableViewController {
-    var playlist: Playlist!
+    var playlistObject: PlaylistObject!
 }

@@ -54,7 +54,8 @@ class PlaylistController: UITableViewController {
         
         tableView.rx.modelSelected(Playlist.self).subscribe(onNext: {
             [weak self] playlist in
-            self?.performSegue(withIdentifier: "showPlaylist", sender: playlist)
+            guard let index = self?.playlists.value.firstIndex(of: playlist) else { return }
+            self?.performSegue(withIdentifier: "showPlaylist", sender: self?.playlistObjects[index])
         }).disposed(by: disposeBag)
     }
     
@@ -92,8 +93,8 @@ class PlaylistController: UITableViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let vc = segue.destination as? PlaylistItemsController, let playlist = sender as? Playlist {
-            vc.playlist = playlist
+        if let vc = segue.destination as? PlaylistItemsController, let playlistObject = sender as? PlaylistObject {
+            vc.playlistObject = playlistObject
         }
     }
 }
