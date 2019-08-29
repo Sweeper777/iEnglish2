@@ -37,15 +37,15 @@ class PlaylistItemsController: UITableViewController {
         datasource.canEditRowAtIndexPath = { _, _ in return true }
         observable.bind(to: tableView.rx.items(dataSource: datasource)).disposed(by: disposeBag)
         
-//        tableView.rx.itemDeleted.subscribe(onNext: {
-//            [weak self] indexPath in
-//            guard let `self` = self else { return }
-//            let playlistObjectToDelete = self.playlistObjects[indexPath.row]
-//            try? RealmWrapper.shared.realm.write {
-//                RealmWrapper.shared.realm.delete(playlistObjectToDelete)
-//            }
-//            self.playlists.accept(self.playlistObjects.map { $0.playlist })
-//        }).disposed(by: disposeBag)
+        tableView.rx.itemDeleted.subscribe(onNext: {
+            [weak self] indexPath in
+            guard let `self` = self else { return }
+            let utteranceObjectToDelete = self.playlistObject.items[indexPath.row]
+            try? RealmWrapper.shared.realm.write {
+                RealmWrapper.shared.realm.delete(utteranceObjectToDelete)
+            }
+            self.playlist = self.playlistObject.playlist
+        }).disposed(by: disposeBag)
         
         navigationItem.rightBarButtonItems?.insert(editButtonItem, at: 0)
         
