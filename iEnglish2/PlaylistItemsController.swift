@@ -56,10 +56,6 @@ class PlaylistItemsController: UITableViewController {
 //        }).disposed(by: disposeBag)
         
         playlist = playlistObject.playlist
-        
-        let u = UtteranceObject()
-        u.string = "Hello"
-        playlist = Playlist(items: [u.utterance, u.utterance], name: "A")
     }
 }
 
