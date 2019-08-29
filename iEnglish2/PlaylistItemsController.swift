@@ -60,3 +60,23 @@ class PlaylistItemsController: UITableViewController {
         playlist = playlistObject.playlist
     }
 }
+
+struct UtteranceSection : AnimatableSectionModelType, IdentifiableType {
+    typealias Identity = String
+    var identity: String {
+        return ""
+    }
+    
+    typealias Item = Utterance
+    
+    var items: [Utterance]
+    
+    init(original: UtteranceSection, items: [Utterance]) {
+        self = original
+        self.items = items
+    }
+    
+    init(items: [Utterance]) {
+        self.items = items
+    }
+}
