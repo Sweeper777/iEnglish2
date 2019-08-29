@@ -80,3 +80,13 @@ struct UtteranceSection : AnimatableSectionModelType, IdentifiableType {
         self.items = items
     }
 }
+
+extension Utterance : IdentifiableType, Equatable {
+    typealias Identity = String
+    
+    var identity: String { return string }
+    
+    static func ==(lhs: Utterance, rhs: Utterance) -> Bool {
+        return lhs.string == rhs.string
+    }
+}
