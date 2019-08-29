@@ -27,15 +27,15 @@ class PlaylistItemsController: UITableViewController {
             view.shouldDisplay(true)
         }
         
-//        let observable = playlists.asObservable().map { [PlaylistSection(items: $0)] }
-//        let datasource = RxTableViewSectionedAnimatedDataSource<PlaylistSection>(configureCell: {
-//            (datasource, tableView, indexPath, playlist) -> UITableViewCell in
-//            let cell = tableView.dequeueReusableCell(withIdentifier: "cell")!
-//            cell.textLabel?.text = playlist.name
-//            return cell
-//        })
-//        datasource.canEditRowAtIndexPath = { _, _ in return true }
-//        observable.bind(to: tableView.rx.items(dataSource: datasource)).disposed(by: disposeBag)
+        let observable = playlistItems.asObservable().map { [UtteranceSection(items: $0)] }
+        let datasource = RxTableViewSectionedAnimatedDataSource<UtteranceSection>(configureCell: {
+            (datasource, tableView, indexPath, utterance) -> UITableViewCell in
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cell")!
+            cell.textLabel?.text = utterance.string
+            return cell
+        })
+        datasource.canEditRowAtIndexPath = { _, _ in return true }
+        observable.bind(to: tableView.rx.items(dataSource: datasource)).disposed(by: disposeBag)
         
 //        tableView.rx.itemDeleted.subscribe(onNext: {
 //            [weak self] indexPath in
@@ -46,8 +46,6 @@ class PlaylistItemsController: UITableViewController {
 //            }
 //            self.playlists.accept(self.playlistObjects.map { $0.playlist })
 //        }).disposed(by: disposeBag)
-//
-//        playlists.accept(playlistObjects.map { $0.playlist })
         
         navigationItem.rightBarButtonItems?.insert(editButtonItem, at: 0)
         
