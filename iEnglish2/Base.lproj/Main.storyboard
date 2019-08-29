@@ -144,10 +144,48 @@
                     <navigationItem key="navigationItem" title="播放列表" id="rvF-mW-Kf9">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="yCn-yG-zhT"/>
                     </navigationItem>
+                    <connections>
+                        <segue destination="ltQ-ou-Nla" kind="presentation" modalPresentationStyle="formSheet" id="tk4-fE-Shm"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PSd-Sg-8FM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2850" y="742"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Aca-1f-E5H">
+            <objects>
+                <navigationController id="ltQ-ou-Nla" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jyp-tg-jJa">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="s0D-tn-wHc" kind="relationship" relationship="rootViewController" id="fux-VX-99F"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vGx-Ek-nRc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3836" y="742"/>
+        </scene>
+        <!--新播放列表项目-->
+        <scene sceneID="lfB-Oe-l9H">
+            <objects>
+                <viewController id="s0D-tn-wHc" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="K1j-Tf-a4d">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="wQ6-L8-okK"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="新播放列表项目" id="fI9-az-Fpl">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="wiL-s5-52u"/>
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="LhN-TY-sPO"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jEQ-IC-6kS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4658" y="746"/>
         </scene>
         <!--播放列表-->
         <scene sceneID="hXr-Jq-a0q">
