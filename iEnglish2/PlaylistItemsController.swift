@@ -57,6 +57,10 @@ class PlaylistItemsController: UITableViewController {
         
         playlist = playlistObject.playlist
     }
+    
+    @IBAction func newPlaylist() {
+        performSegue(withIdentifier: "newPlaylistItem", sender: nil)
+    }
 }
 
 struct UtteranceSection : AnimatableSectionModelType, IdentifiableType {
