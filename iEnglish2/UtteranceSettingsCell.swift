@@ -19,4 +19,12 @@ final class UtteranceSettingsCell: Cell<UtteranceSettings>, CellType {
         // specify the desired height for our cell
         height = { return 293 }
     }
+    
+    override func update() {
+        super.update()
+        
+        guard let settings = row.value else { return }
+        
+        utteranceSettingsView.utteranceSettings = settings
+    }
 }
