@@ -12,4 +12,11 @@ final class UtteranceSettingsCell: Cell<UtteranceSettings>, CellType {
         super.init(coder: aDecoder)
     }
     
+    override func setup() {
+        super.setup()
+        selectionStyle = .none
+        
+        // specify the desired height for our cell
+        height = { return 293 }
+    }
 }
