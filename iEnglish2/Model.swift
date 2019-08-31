@@ -22,7 +22,7 @@ struct Utterance {
     let language: String
 }
 
-struct UtteranceSettings {
+struct UtteranceSettings : Equatable {
     let rate: Float
     let pitch: Float
     let volume: Float
