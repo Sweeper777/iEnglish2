@@ -25,6 +25,8 @@ class UtteranceSettingsView: UIView {
         }
     }
     
+    weak var delegate: UtteranceSettingsViewDelegate?
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()
@@ -53,4 +55,8 @@ class UtteranceSettingsView: UIView {
         volumeSlider.maximumValue = 1
         volumeSlider.value = 1
     }
+}
+
+protocol UtteranceSettingsViewDelegate : class {
+    func settingsDidChange(utteranceSettingsView: UtteranceSettingsView, newSettings: UtteranceSettings)
 }
