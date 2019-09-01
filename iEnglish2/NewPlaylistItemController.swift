@@ -21,6 +21,10 @@ class NewPlaylistItemController: FormViewController {
         }
     }
     
+    @IBAction func cancel() {
+        dismiss(animated: true, completion: nil)
+    }
+    
     
     func showError(_ message: String) {
         let alert = SCLAlertView(appearance: SCLAlertView.SCLAppearance(showCloseButton: false))
