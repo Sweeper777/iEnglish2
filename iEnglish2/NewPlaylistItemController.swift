@@ -25,6 +25,18 @@ class NewPlaylistItemController: FormViewController {
         dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func done() {
+        let values = form.values()
+        guard let content = values[tagContent] as? String else {
+            showError("请输入句子或词语!")
+            return
+        }
+        guard let settings = values[tagUtteranceSettings] as? UtteranceSettings else {
+            fatalError()
+        }
+        delegate?.didCreatePlaylistItem(Utterance(string: content, settings: settings))
+        dismiss(animated: true, completion: nil)
+    }
     
     func showError(_ message: String) {
         let alert = SCLAlertView(appearance: SCLAlertView.SCLAppearance(showCloseButton: false))
