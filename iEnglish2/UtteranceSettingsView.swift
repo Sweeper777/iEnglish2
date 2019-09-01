@@ -55,6 +55,10 @@ class UtteranceSettingsView: UIView {
         volumeSlider.maximumValue = 1
         volumeSlider.value = 1
     }
+    
+    @objc func controlChanged() {
+        delegate?.settingsDidChange(utteranceSettingsView: self, newSettings: utteranceSettings)
+    }
 }
 
 protocol UtteranceSettingsViewDelegate : class {
