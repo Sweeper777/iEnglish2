@@ -19,6 +19,10 @@
 		5A04F3212307A0F60035F78F /* LanguageDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A04F3202307A0F60035F78F /* LanguageDetector.swift */; };
 		5A04F3232307AF370035F78F /* UtteranceSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A04F3222307AF370035F78F /* UtteranceSettingsView.swift */; };
 		5A04F3252307AF6E0035F78F /* UtteranceSettingsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A04F3242307AF6E0035F78F /* UtteranceSettingsView.xib */; };
+		5A2301F32318B12900ECA0A4 /* NewPlaylistItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2301F22318B12900ECA0A4 /* NewPlaylistItemController.swift */; };
+		5A2301F52318BA2D00ECA0A4 /* UtteranceSettingsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2301F42318BA2D00ECA0A4 /* UtteranceSettingsRow.swift */; };
+		5A2301F72318BBC900ECA0A4 /* UtteranceSettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2301F62318BBC900ECA0A4 /* UtteranceSettingsCell.swift */; };
+		5A2301F92318BF7400ECA0A4 /* UtteranceSettingsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A2301F82318BF7400ECA0A4 /* UtteranceSettingsCell.xib */; };
 		5AFC75C1230A3C9A002FFA6F /* RealmWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFC75C0230A3C9A002FFA6F /* RealmWrapper.swift */; };
 		5AFC75C3230A3D44002FFA6F /* PlaylistController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFC75C2230A3D44002FFA6F /* PlaylistController.swift */; };
 		BFCC3C84CFDB8F40EC48483F /* Pods_iEnglish2Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5657980F40EA74B39581D14F /* Pods_iEnglish2Tests.framework */; };
@@ -53,6 +57,10 @@
 		5A04F3202307A0F60035F78F /* LanguageDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageDetector.swift; sourceTree = "<group>"; };
 		5A04F3222307AF370035F78F /* UtteranceSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtteranceSettingsView.swift; sourceTree = "<group>"; };
 		5A04F3242307AF6E0035F78F /* UtteranceSettingsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UtteranceSettingsView.xib; sourceTree = "<group>"; };
+		5A2301F22318B12900ECA0A4 /* NewPlaylistItemController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlaylistItemController.swift; sourceTree = "<group>"; };
+		5A2301F42318BA2D00ECA0A4 /* UtteranceSettingsRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtteranceSettingsRow.swift; sourceTree = "<group>"; };
+		5A2301F62318BBC900ECA0A4 /* UtteranceSettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtteranceSettingsCell.swift; sourceTree = "<group>"; };
+		5A2301F82318BF7400ECA0A4 /* UtteranceSettingsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UtteranceSettingsCell.xib; sourceTree = "<group>"; };
 		5AFC75C0230A3C9A002FFA6F /* RealmWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmWrapper.swift; sourceTree = "<group>"; };
 		5AFC75C2230A3D44002FFA6F /* PlaylistController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistController.swift; sourceTree = "<group>"; };
 		6508BC52BA7B770488ED6246 /* Pods-iEnglish2Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iEnglish2Tests.debug.xcconfig"; path = "Target Support Files/Pods-iEnglish2Tests/Pods-iEnglish2Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -115,9 +123,13 @@
 				5A004A402303A5D500CCF20E /* AppDelegate.swift */,
 				5A04F3222307AF370035F78F /* UtteranceSettingsView.swift */,
 				5A04F3242307AF6E0035F78F /* UtteranceSettingsView.xib */,
+				5A2301F42318BA2D00ECA0A4 /* UtteranceSettingsRow.swift */,
+				5A2301F62318BBC900ECA0A4 /* UtteranceSettingsCell.swift */,
+				5A2301F82318BF7400ECA0A4 /* UtteranceSettingsCell.xib */,
 				5A004A422303A5D500CCF20E /* ViewController.swift */,
 				5AFC75C2230A3D44002FFA6F /* PlaylistController.swift */,
 				5A03FDBD2313745A000BAF99 /* PlaylistItemsController.swift */,
+				5A2301F22318B12900ECA0A4 /* NewPlaylistItemController.swift */,
 				5A004A442303A5D500CCF20E /* Main.storyboard */,
 				5A00745C2304D2A90004C3CF /* Model.swift */,
 				5A04F3202307A0F60035F78F /* LanguageDetector.swift */,
@@ -234,6 +246,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A004A4B2303A5D600CCF20E /* LaunchScreen.storyboard in Resources */,
+				5A2301F92318BF7400ECA0A4 /* UtteranceSettingsCell.xib in Resources */,
 				5A04F3252307AF6E0035F78F /* UtteranceSettingsView.xib in Resources */,
 				5A004A482303A5D600CCF20E /* Assets.xcassets in Resources */,
 				5A004A462303A5D500CCF20E /* Main.storyboard in Resources */,
@@ -318,6 +331,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A2301F32318B12900ECA0A4 /* NewPlaylistItemController.swift in Sources */,
+				5A2301F72318BBC900ECA0A4 /* UtteranceSettingsCell.swift in Sources */,
 				5A03FDBE2313745A000BAF99 /* PlaylistItemsController.swift in Sources */,
 				5A00745D2304D2A90004C3CF /* Model.swift in Sources */,
 				5A004A432303A5D500CCF20E /* ViewController.swift in Sources */,
@@ -326,6 +341,7 @@
 				5A004A412303A5D500CCF20E /* AppDelegate.swift in Sources */,
 				5A04F3212307A0F60035F78F /* LanguageDetector.swift in Sources */,
 				5AFC75C3230A3D44002FFA6F /* PlaylistController.swift in Sources */,
+				5A2301F52318BA2D00ECA0A4 /* UtteranceSettingsRow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
