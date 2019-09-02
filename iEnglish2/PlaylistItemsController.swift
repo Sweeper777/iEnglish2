@@ -49,12 +49,6 @@ class PlaylistItemsController: UITableViewController {
         
         navigationItem.rightBarButtonItems?.insert(editButtonItem, at: 0)
         
-//        tableView.rx.modelSelected(Playlist.self).subscribe(onNext: {
-//            [weak self] playlist in
-//            guard let index = self?.playlists.value.firstIndex(of: playlist) else { return }
-//            self?.performSegue(withIdentifier: "showPlaylist", sender: self?.playlistObjects[index])
-//        }).disposed(by: disposeBag)
-        
         playlist = playlistObject.playlist
     }
     
