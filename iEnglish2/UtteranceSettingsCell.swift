@@ -15,9 +15,8 @@ final class UtteranceSettingsCell: Cell<UtteranceSettings>, CellType, UtteranceS
     override func setup() {
         super.setup()
         selectionStyle = .none
-        
-        // specify the desired height for our cell
         height = { return 293 }
+        utteranceSettingsView.delegate = self
         
         row.value = utteranceSettingsView.utteranceSettings
     }
