@@ -1,7 +1,7 @@
 import UIKit
 import Eureka
 
-final class UtteranceSettingsCell: Cell<UtteranceSettings>, CellType {
+final class UtteranceSettingsCell: Cell<UtteranceSettings>, CellType, UtteranceSettingsViewDelegate {
     @IBOutlet var utteranceSettingsView: UtteranceSettingsView!
     
     required init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -28,5 +28,10 @@ final class UtteranceSettingsCell: Cell<UtteranceSettings>, CellType {
         guard let settings = row.value else { return }
         
         utteranceSettingsView.utteranceSettings = settings
+    }
+    
+    func settingsDidChange(utteranceSettingsView: UtteranceSettingsView, newSettings: UtteranceSettings) {
+        row.value = newSettings
+        row.updateCell()
     }
 }
