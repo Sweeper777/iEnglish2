@@ -54,6 +54,11 @@ class UtteranceSettingsView: UIView {
         volumeSlider.minimumValue = 0
         volumeSlider.maximumValue = 1
         volumeSlider.value = 1
+        
+        rateSlider.addTarget(self, action: #selector(controlChanged), for: .valueChanged)
+        pitchSlider.addTarget(self, action: #selector(controlChanged), for: .valueChanged)
+        volumeSlider.addTarget(self, action: #selector(controlChanged), for: .valueChanged)
+        languageSegmentedControl.addTarget(self, action: #selector(controlChanged), for: .valueChanged)
     }
     
     @objc func controlChanged() {
