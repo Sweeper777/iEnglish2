@@ -55,6 +55,12 @@ class PlaylistItemsController: UITableViewController {
     @IBAction func newPlaylist() {
         performSegue(withIdentifier: "newPlaylistItem", sender: nil)
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let vc = (segue.destination as? UINavigationController)?.topViewController as? NewPlaylistItemController {
+            vc.delegate = self
+        }
+    }
 }
 
 struct UtteranceSection : AnimatableSectionModelType, IdentifiableType {
