@@ -77,6 +77,15 @@ struct UtteranceSection : AnimatableSectionModelType, IdentifiableType {
     }
 }
 
+extension PlaylistItemsController : NewPlaylistItemControllerDelegate {
+    func didCreatePlaylistItem(_ item: Utterance) {
+        try? RealmWrapper.shared.realm.write {
+            self.playlistObject.items.append(UtteranceObject(from: item))
+        }
+        playlist = playlistObject.playlist
+    }
+}
+
 extension Utterance : IdentifiableType, Equatable {
     typealias Identity = String
     
