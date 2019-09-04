@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Listen Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="iEnglish2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ListenController" customModule="iEnglish2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -150,11 +150,98 @@
                     </navigationItem>
                     <connections>
                         <segue destination="ltQ-ou-Nla" kind="presentation" identifier="newPlaylistItem" modalPresentationStyle="formSheet" id="tk4-fE-Shm"/>
+                        <segue destination="Hbe-o0-WWD" kind="presentation" identifier="playPlaylist" modalPresentationStyle="overFullScreen" modalTransitionStyle="crossDissolve" id="xt7-he-mzR"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PSd-Sg-8FM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2850" y="742"/>
+        </scene>
+        <!--Now Playing Controller-->
+        <scene sceneID="Axx-gt-T90">
+            <objects>
+                <viewController id="Hbe-o0-WWD" customClass="NowPlayingController" customModule="iEnglish2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aIs-xv-K7U">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K7q-dP-xAW">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" id="7gS-jp-Z77">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SSV-2W-foX">
+                                            <rect key="frame" x="8" y="33" width="304" height="34"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <string key="text">正在播放
+我的某个播放列表</string>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="fillEqually" spacing="61" translatesAutoresizingMaskIntoConstraints="NO" id="pYA-Iw-kwp">
+                                            <rect key="frame" x="62" y="423" width="197" height="25"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MKh-Yq-TKU">
+                                                    <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
+                                                    <state key="normal" image="icons8-skip_to_start_filled"/>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LQr-3l-wXX">
+                                                    <rect key="frame" x="86" y="0.0" width="25" height="25"/>
+                                                    <state key="normal" image="icons8-play_filled"/>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K0r-jc-kIH">
+                                                    <rect key="frame" x="172" y="0.0" width="25" height="25"/>
+                                                    <state key="normal" image="icons8-end_filled"/>
+                                                </button>
+                                            </subviews>
+                                        </stackView>
+                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uFg-aa-rZa" customClass="MPVolumeView" customModule="MediaPlayer">
+                                            <rect key="frame" x="40" y="462" width="240" height="34"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </view>
+                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="osO-uk-RjB">
+                                            <rect key="frame" x="40" y="161" width="240" height="240"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <subviews>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="pkS-3i-WHN">
+                                                    <rect key="frame" x="0.0" y="0.0" width="240" height="240"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </view>
+                                    </subviews>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="btP-Aa-7eC"/>
+                    </view>
+                    <connections>
+                        <outlet property="blur" destination="K7q-dP-xAW" id="hFh-i4-hCW"/>
+                        <outlet property="controlButtonsStackView" destination="pYA-Iw-kwp" id="jSU-vX-Jb6"/>
+                        <outlet property="nextButton" destination="K0r-jc-kIH" id="76R-ID-5kW"/>
+                        <outlet property="playPauseButton" destination="LQr-3l-wXX" id="eYv-bR-gWN"/>
+                        <outlet property="playlistNameLabel" destination="SSV-2W-foX" id="9xQ-mR-mFk"/>
+                        <outlet property="previousButton" destination="MKh-Yq-TKU" id="KrO-Ax-ab6"/>
+                        <outlet property="utteranceTextView" destination="pkS-3i-WHN" id="EYp-Po-vbg"/>
+                        <outlet property="utteranceTextViewContainer" destination="osO-uk-RjB" id="x3b-GM-Xuu"/>
+                        <outlet property="volumeView" destination="uFg-aa-rZa" id="1vu-c1-BQl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vnV-QG-33e" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2850" y="1477.8169014084508"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Aca-1f-E5H">
@@ -256,9 +343,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="icons8-end_filled" width="25" height="25"/>
         <image name="icons8-list" width="25" height="25"/>
         <image name="icons8-list_filled" width="25" height="25"/>
+        <image name="icons8-play_filled" width="25" height="25"/>
         <image name="icons8-room_sound" width="25" height="25"/>
         <image name="icons8-room_sound_filled" width="25" height="25"/>
+        <image name="icons8-skip_to_start_filled" width="25" height="25"/>
     </resources>
 </document>
