@@ -47,6 +47,11 @@ class PlaylistItemsController: UITableViewController {
             self.playlist = self.playlistObject.playlist
         }).disposed(by: disposeBag)
         
+        tableView.rx.itemSelected.subscribe(onNext: {
+            [weak self] indexPath in
+            self?.performSegue(withIdentifier: "playPlaylist", sender: indexPath.row)
+        }).disposed(by: disposeBag)
+        
         navigationItem.rightBarButtonItems?.insert(editButtonItem, at: 0)
         
         playlist = playlistObject.playlist
