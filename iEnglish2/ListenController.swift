@@ -5,7 +5,7 @@ import AVFoundation
 import RealmSwift
 import SCLAlertView
 
-class ViewController: UIViewController {
+class ListenController: UIViewController {
 
     @IBOutlet var textField: UITextField!
     @IBOutlet var playButton: PressableButton!
