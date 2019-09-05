@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		31F293925BA76D231EF05B2B /* Pods_iEnglish2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 599C0A1E87663F80068DCAFA /* Pods_iEnglish2.framework */; };
 		5A004A412303A5D500CCF20E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A004A402303A5D500CCF20E /* AppDelegate.swift */; };
-		5A004A432303A5D500CCF20E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A004A422303A5D500CCF20E /* ViewController.swift */; };
+		5A004A432303A5D500CCF20E /* ListenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A004A422303A5D500CCF20E /* ListenController.swift */; };
 		5A004A462303A5D500CCF20E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A004A442303A5D500CCF20E /* Main.storyboard */; };
 		5A004A482303A5D600CCF20E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A004A472303A5D600CCF20E /* Assets.xcassets */; };
 		5A004A4B2303A5D600CCF20E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A004A492303A5D600CCF20E /* LaunchScreen.storyboard */; };
@@ -19,6 +19,7 @@
 		5A04F3212307A0F60035F78F /* LanguageDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A04F3202307A0F60035F78F /* LanguageDetector.swift */; };
 		5A04F3232307AF370035F78F /* UtteranceSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A04F3222307AF370035F78F /* UtteranceSettingsView.swift */; };
 		5A04F3252307AF6E0035F78F /* UtteranceSettingsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A04F3242307AF6E0035F78F /* UtteranceSettingsView.xib */; };
+		5A0D6E1C231EDD0400C9C1F1 /* NowPlayingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0D6E1B231EDD0400C9C1F1 /* NowPlayingController.swift */; };
 		5A2301F32318B12900ECA0A4 /* NewPlaylistItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2301F22318B12900ECA0A4 /* NewPlaylistItemController.swift */; };
 		5A2301F52318BA2D00ECA0A4 /* UtteranceSettingsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2301F42318BA2D00ECA0A4 /* UtteranceSettingsRow.swift */; };
 		5A2301F72318BBC900ECA0A4 /* UtteranceSettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2301F62318BBC900ECA0A4 /* UtteranceSettingsCell.swift */; };
@@ -44,7 +45,7 @@
 		599C0A1E87663F80068DCAFA /* Pods_iEnglish2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iEnglish2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A004A3D2303A5D500CCF20E /* iEnglish2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iEnglish2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A004A402303A5D500CCF20E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5A004A422303A5D500CCF20E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5A004A422303A5D500CCF20E /* ListenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListenController.swift; sourceTree = "<group>"; };
 		5A004A452303A5D500CCF20E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5A004A472303A5D600CCF20E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5A004A4A2303A5D600CCF20E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -57,6 +58,7 @@
 		5A04F3202307A0F60035F78F /* LanguageDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageDetector.swift; sourceTree = "<group>"; };
 		5A04F3222307AF370035F78F /* UtteranceSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtteranceSettingsView.swift; sourceTree = "<group>"; };
 		5A04F3242307AF6E0035F78F /* UtteranceSettingsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UtteranceSettingsView.xib; sourceTree = "<group>"; };
+		5A0D6E1B231EDD0400C9C1F1 /* NowPlayingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingController.swift; sourceTree = "<group>"; };
 		5A2301F22318B12900ECA0A4 /* NewPlaylistItemController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlaylistItemController.swift; sourceTree = "<group>"; };
 		5A2301F42318BA2D00ECA0A4 /* UtteranceSettingsRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtteranceSettingsRow.swift; sourceTree = "<group>"; };
 		5A2301F62318BBC900ECA0A4 /* UtteranceSettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtteranceSettingsCell.swift; sourceTree = "<group>"; };
@@ -126,10 +128,11 @@
 				5A2301F42318BA2D00ECA0A4 /* UtteranceSettingsRow.swift */,
 				5A2301F62318BBC900ECA0A4 /* UtteranceSettingsCell.swift */,
 				5A2301F82318BF7400ECA0A4 /* UtteranceSettingsCell.xib */,
-				5A004A422303A5D500CCF20E /* ViewController.swift */,
+				5A004A422303A5D500CCF20E /* ListenController.swift */,
 				5AFC75C2230A3D44002FFA6F /* PlaylistController.swift */,
 				5A03FDBD2313745A000BAF99 /* PlaylistItemsController.swift */,
 				5A2301F22318B12900ECA0A4 /* NewPlaylistItemController.swift */,
+				5A0D6E1B231EDD0400C9C1F1 /* NowPlayingController.swift */,
 				5A004A442303A5D500CCF20E /* Main.storyboard */,
 				5A00745C2304D2A90004C3CF /* Model.swift */,
 				5A04F3202307A0F60035F78F /* LanguageDetector.swift */,
@@ -337,10 +340,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A2301F32318B12900ECA0A4 /* NewPlaylistItemController.swift in Sources */,
+				5A0D6E1C231EDD0400C9C1F1 /* NowPlayingController.swift in Sources */,
 				5A2301F72318BBC900ECA0A4 /* UtteranceSettingsCell.swift in Sources */,
 				5A03FDBE2313745A000BAF99 /* PlaylistItemsController.swift in Sources */,
 				5A00745D2304D2A90004C3CF /* Model.swift in Sources */,
-				5A004A432303A5D500CCF20E /* ViewController.swift in Sources */,
+				5A004A432303A5D500CCF20E /* ListenController.swift in Sources */,
 				5A04F3232307AF370035F78F /* UtteranceSettingsView.swift in Sources */,
 				5AFC75C1230A3C9A002FFA6F /* RealmWrapper.swift in Sources */,
 				5A004A412303A5D500CCF20E /* AppDelegate.swift in Sources */,
