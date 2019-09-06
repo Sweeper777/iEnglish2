@@ -76,6 +76,24 @@ class NowPlayingController : UIViewController {
     override func viewDidLoad() {
         setupViews()
         
+        speechSynthesiser.delegate = self
     }
+}
+
+extension NowPlayingController : AVSpeechSynthesizerDelegate {
+    func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didStart utterance: AVSpeechUtterance) {
+        try? AVAudioSession.sharedInstance().setActive(true)
+    }
+    
+    func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didPause utterance: AVSpeechUtterance) {
+        try? AVAudioSession.sharedInstance().setActive(false)
+    }
+    
+    func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didContinue utterance: AVSpeechUtterance) {
+        try? AVAudioSession.sharedInstance().setActive(true)
+    }
+    
+    func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didCancel utterance: AVSpeechUtterance) {
+        try? AVAudioSession.sharedInstance().setActive(false)
     }
 }
