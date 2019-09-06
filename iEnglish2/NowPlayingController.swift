@@ -37,6 +37,11 @@ class NowPlayingController : UIViewController {
         utteranceTextViewContainer.layer.shadowOpacity = 1
         utteranceTextViewContainer.layer.shadowOffset = .zero
         
+        [previousButton!, playPauseButton!, nextButton!].forEach { (button) in
+            button.setImage(button.image(for: .normal)?.withRenderingMode(.alwaysTemplate), for: .highlighted)
+            button.tintColor = UIColor(white: 0, alpha: 0.3)
+        }
+        
         utteranceTextView.snp.makeConstraints { (make) in
             make.center.equalToSuperview()
             make.height.equalToSuperview()
