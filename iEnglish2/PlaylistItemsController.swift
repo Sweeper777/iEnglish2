@@ -64,6 +64,9 @@ class PlaylistItemsController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let vc = (segue.destination as? UINavigationController)?.topViewController as? NewPlaylistItemController {
             vc.delegate = self
+        } else if let vc = segue.destination as? NowPlayingController, let startingIndex = sender as? Int {
+            vc.playlist = playlist
+            vc.currentIndex = startingIndex
         }
     }
 }
