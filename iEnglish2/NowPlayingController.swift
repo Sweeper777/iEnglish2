@@ -26,4 +26,10 @@ class NowPlayingController : UIViewController {
     
     let speechSynthesiser = AVSpeechSynthesizer()
     
+    private func setupViews() {
+        blur.snp.makeConstraints { (make) in
+            make.width.equalToSuperview()
+            make.height.equalToSuperview()
+        }
+    }
 }
