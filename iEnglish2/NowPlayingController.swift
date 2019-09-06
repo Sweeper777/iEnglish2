@@ -70,5 +70,12 @@ class NowPlayingController : UIViewController {
             make.width.equalTo(utteranceTextViewContainer.snp.width)
             make.centerX.equalToSuperview()
             make.top.equalTo(controlButtonsStackView.snp.bottom).offset(14)
+        }
+    }
+    
+    override func viewDidLoad() {
+        setupViews()
+        
+    }
     }
 }
