@@ -31,6 +31,12 @@ class NowPlayingController : UIViewController {
             make.width.equalToSuperview()
             make.height.equalToSuperview()
         }
+        utteranceTextViewContainer.layer.masksToBounds = false
+        utteranceTextViewContainer.layer.shadowRadius = 5
+        utteranceTextViewContainer.layer.shadowColor = UIColor.black.cgColor
+        utteranceTextViewContainer.layer.shadowOpacity = 1
+        utteranceTextViewContainer.layer.shadowOffset = .zero
+        
         utteranceTextView.snp.makeConstraints { (make) in
             make.center.equalToSuperview()
             make.height.equalToSuperview()
