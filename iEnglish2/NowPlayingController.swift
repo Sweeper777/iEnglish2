@@ -36,6 +36,7 @@ class NowPlayingController : UIViewController {
         utteranceTextViewContainer.layer.shadowColor = UIColor.black.cgColor
         utteranceTextViewContainer.layer.shadowOpacity = 1
         utteranceTextViewContainer.layer.shadowOffset = .zero
+        utteranceTextView.attributedText = NSAttributedString(string: currentUtterance.string)
         
         [previousButton!, playPauseButton!, nextButton!].forEach { (button) in
             button.setImage(button.image(for: .normal)?.withRenderingMode(.alwaysTemplate), for: .highlighted)
