@@ -36,7 +36,16 @@ class NowPlayingController : UIViewController {
         utteranceTextViewContainer.layer.shadowColor = UIColor.black.cgColor
         utteranceTextViewContainer.layer.shadowOpacity = 1
         utteranceTextViewContainer.layer.shadowOffset = .zero
-        utteranceTextView.attributedText = NSAttributedString(string: currentUtterance.string)
+        
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.alignment = .center
+        
+        let attributes: [NSAttributedString.Key : Any] = [
+            .font: UIFont.systemFont(ofSize: UIFont.systemFontSize),
+            .paragraphStyle: paragraphStyle
+        ]
+        
+        utteranceTextView.attributedText = NSAttributedString(string: currentUtterance.string, attributes: attributes)
         
         [previousButton!, playPauseButton!, nextButton!].forEach { (button) in
             button.setImage(button.image(for: .normal)?.withRenderingMode(.alwaysTemplate), for: .highlighted)
