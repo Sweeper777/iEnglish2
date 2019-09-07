@@ -35,7 +35,7 @@ class NowPlayingController : UIViewController {
             .paragraphStyle: paragraphStyle
         ]
         
-        utteranceTextView.attributedText = NSAttributedString(string: currentUtterance.string, attributes: attributes)
+        utteranceTextView?.attributedText = NSAttributedString(string: currentUtterance.string, attributes: attributes)
     }
     
     private func setupViews() {
