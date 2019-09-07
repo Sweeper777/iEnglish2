@@ -16,7 +16,7 @@ class NowPlayingController : UIViewController {
     var playlist: Playlist!
     var currentIndex = 0 {
         didSet {
-            utteranceTextView?.attributedText = NSAttributedString(string: currentUtterance.string)
+            updateTextView()
         }
     }
     
