@@ -109,6 +109,11 @@ class NowPlayingController : UIViewController {
         speechSynthesiser.delegate = self
     }
     
+    @objc func previousPressed() {
+        guard currentIndex > 0 else { return }
+        previous()
+    }
+    
     @objc func playPausePressed() {
         if isPlaying {
             pause()
