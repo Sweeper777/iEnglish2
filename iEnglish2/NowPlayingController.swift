@@ -138,6 +138,16 @@ class NowPlayingController : UIViewController {
         isPlaying = true
     }
     
+    func continuePlaying() {
+        speechSynthesiser.continueSpeaking()
+        isPlaying = true
+    }
+    
+    func pause() {
+        speechSynthesiser.pauseSpeaking(at: .immediate)
+        isPlaying = false
+    }
+    
 }
 
 extension NowPlayingController : AVSpeechSynthesizerDelegate {
