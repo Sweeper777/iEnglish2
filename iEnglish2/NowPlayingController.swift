@@ -108,6 +108,19 @@ class NowPlayingController : UIViewController {
         
         speechSynthesiser.delegate = self
     }
+    
+    @objc func playPausePressed() {
+        if isPlaying {
+            pause()
+        } else {
+            if speechSynthesiser.isPaused {
+                continuePlaying()
+            } else {
+                playCurrentUtterance()
+            }
+        }
+    }
+    
 }
 
 extension NowPlayingController : AVSpeechSynthesizerDelegate {
