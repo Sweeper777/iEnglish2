@@ -114,6 +114,11 @@ class NowPlayingController : UIViewController {
         previous()
     }
     
+    @objc func nextPressed() {
+        guard currentIndex < playlist.items.count - 1 else { return }
+        next()
+    }
+    
     @objc func playPausePressed() {
         if isPlaying {
             pause()
