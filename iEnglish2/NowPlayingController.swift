@@ -67,6 +67,10 @@ class NowPlayingController : UIViewController {
             button.setImage(button.image(for: .normal)?.withRenderingMode(.alwaysTemplate), for: .highlighted)
             button.tintColor = UIColor(white: 0, alpha: 0.3)
         }
+        previousButton.addTarget(self, action: #selector(previousPressed), for: .touchUpInside)
+        playPauseButton.addTarget(self, action: #selector(playPausePressed), for: .touchUpInside)
+        nextButton.addTarget(self, action: #selector(nextPressed), for: .touchUpInside)
+        
         
         utteranceTextView.snp.makeConstraints { (make) in
             make.center.equalToSuperview()
