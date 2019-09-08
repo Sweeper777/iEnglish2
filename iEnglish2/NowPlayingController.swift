@@ -131,6 +131,13 @@ class NowPlayingController : UIViewController {
         }
     }
     
+    
+    func playCurrentUtterance() {
+        speechSynthesiser.stopSpeaking(at: .immediate)
+        speechSynthesiser.speak(currentUtterance.avUtterance)
+        isPlaying = true
+    }
+    
 }
 
 extension NowPlayingController : AVSpeechSynthesizerDelegate {
