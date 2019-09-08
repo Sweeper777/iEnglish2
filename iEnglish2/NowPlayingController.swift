@@ -24,6 +24,18 @@ class NowPlayingController : UIViewController {
         return playlist.items[currentIndex]
     }
     
+    var isPlaying = false {
+        didSet {
+            if isPlaying {
+                playPauseButton.setImage(UIImage(named: "icons8-pause_filled"), for: .normal)
+                playPauseButton.setImage(UIImage(named: "icons8-pause_filled")?.withRenderingMode(.alwaysTemplate), for: .highlighted)
+            } else {
+                playPauseButton.setImage(UIImage(named: "icons8-play_filled"), for: .normal)
+                playPauseButton.setImage(UIImage(named: "icons8-play_filled")?.withRenderingMode(.alwaysTemplate), for: .highlighted)
+            }
+        }
+    }
+    
     let speechSynthesiser = AVSpeechSynthesizer()
     
     private func updateTextView() {
