@@ -62,6 +62,7 @@ class NowPlayingController : UIViewController {
         utteranceTextViewContainer.layer.shadowOffset = .zero
         
         updateTextView()
+        playlistNameLabel.text = "正在播放\n\(playlist.name)"
         
         [previousButton!, playPauseButton!, nextButton!].forEach { (button) in
             button.setImage(button.image(for: .normal)?.withRenderingMode(.alwaysTemplate), for: .highlighted)
