@@ -175,4 +175,9 @@ extension NowPlayingController : AVSpeechSynthesizerDelegate {
     func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didCancel utterance: AVSpeechUtterance) {
         try? AVAudioSession.sharedInstance().setActive(false)
     }
+    func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, willSpeakRangeOfSpeechString characterRange: NSRange, utterance: AVSpeechUtterance) {
+        let attributedString = NSMutableAttributedString(attributedString: utteranceTextView.attributedText)
+        attributedString.addAttribute(NSAttributedString.Key.backgroundColor, value: UIColor.yellow, range: characterRange)
+        utteranceTextView.attributedText = attributedString
+    }
 }
