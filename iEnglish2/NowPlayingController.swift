@@ -177,6 +177,7 @@ extension NowPlayingController : AVSpeechSynthesizerDelegate {
     }
     func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, willSpeakRangeOfSpeechString characterRange: NSRange, utterance: AVSpeechUtterance) {
         let attributedString = NSMutableAttributedString(attributedString: utteranceTextView.attributedText)
+        attributedString.removeAttribute(NSAttributedString.Key.backgroundColor, range: NSRange(location: 0, length: attributedString.length))
         attributedString.addAttribute(NSAttributedString.Key.backgroundColor, value: UIColor.yellow, range: characterRange)
         utteranceTextView.attributedText = attributedString
     }
