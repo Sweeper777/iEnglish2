@@ -148,6 +148,15 @@ class NowPlayingController : UIViewController {
         isPlaying = false
     }
     
+    func next() {
+        currentIndex += 1
+        playCurrentUtterance()
+    }
+    
+    func previous() {
+        currentIndex -= 1
+        playCurrentUtterance()
+    }
 }
 
 extension NowPlayingController : AVSpeechSynthesizerDelegate {
