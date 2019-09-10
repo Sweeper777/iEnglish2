@@ -135,6 +135,12 @@ class NowPlayingController : UIViewController {
         }
     }
     
+    @objc func backToPlaylist() {
+        speechSynthesiser.stopSpeaking(at: .immediate)
+        try? AVAudioSession.sharedInstance().setActive(false)
+        isPlaying = false
+        dismiss(animated: true, completion: nil)
+    }
     
     func playCurrentUtterance() {
         speechSynthesiser.stopSpeaking(at: .immediate)
