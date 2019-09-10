@@ -49,6 +49,7 @@ class PlaylistItemsController: UITableViewController {
         
         tableView.rx.itemSelected.subscribe(onNext: {
             [weak self] indexPath in
+            self?.tableView.deselectRow(at: indexPath, animated: true)
             self?.performSegue(withIdentifier: "playPlaylist", sender: indexPath.row)
         }).disposed(by: disposeBag)
         
