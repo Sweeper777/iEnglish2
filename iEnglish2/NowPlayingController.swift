@@ -72,6 +72,9 @@ class NowPlayingController : UIViewController {
         playPauseButton.addTarget(self, action: #selector(playPausePressed), for: .touchUpInside)
         nextButton.addTarget(self, action: #selector(nextPressed), for: .touchUpInside)
         
+        let gestureRecogniser = UITapGestureRecognizer(target: self, action: #selector(backToPlaylist))
+        playlistNameLabel.isUserInteractionEnabled = true
+        playlistNameLabel.addGestureRecognizer(gestureRecogniser)
         
         utteranceTextView.snp.makeConstraints { (make) in
             make.center.equalToSuperview()
