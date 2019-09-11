@@ -138,7 +138,7 @@ class NowPlayingController : UIViewController {
     }
     
     @objc func backToPlaylist() {
-        speechSynthesiser.stopSpeaking(at: .immediate)
+        isManuallyStopping = speechSynthesiser.stopSpeaking(at: .immediate)
         try? AVAudioSession.sharedInstance().setActive(false)
         isPlaying = false
         dismiss(animated: true, completion: nil)
