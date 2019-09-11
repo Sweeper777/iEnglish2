@@ -34,8 +34,12 @@ class NewPlaylistItemController: FormViewController {
         guard let settings = values[tagUtteranceSettings] as? UtteranceSettings else {
             fatalError()
         }
-        delegate?.didCreatePlaylistItem(Utterance(string: content, settings: settings))
-        dismiss(animated: true, completion: nil)
+        
+        func callDelegateAndDismiss() {
+            delegate?.didCreatePlaylistItem(Utterance(string: content, settings: settings))
+            dismiss(animated: true, completion: nil)
+        }
+        
     }
     
     func showError(_ message: String) {
