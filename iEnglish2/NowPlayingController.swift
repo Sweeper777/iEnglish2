@@ -36,6 +36,8 @@ class NowPlayingController : UIViewController {
         }
     }
     
+    var isManuallyStopping = false
+    
     let speechSynthesiser = AVSpeechSynthesizer()
     
     private func updateTextView() {
