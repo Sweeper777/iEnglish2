@@ -192,6 +192,11 @@ extension NowPlayingController : AVSpeechSynthesizerDelegate {
     
     func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didFinish utterance: AVSpeechUtterance) {
         print("Finish!")
+        if isManuallyStopping {
+            try? AVAudioSession.sharedInstance().setActive(false)
+            isManuallyStopping = false
+            return
+        }
         if currentIndex >= playlist.items.count - 1 {
             try? AVAudioSession.sharedInstance().setActive(false)
             isPlaying = false
