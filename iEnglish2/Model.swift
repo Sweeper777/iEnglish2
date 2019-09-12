@@ -79,4 +79,8 @@ extension Utterance {
     init(string: String, settings: UtteranceSettings) {
         self.init(string: string, rate: settings.rate, pitch: settings.pitch, volume: settings.volume, language: settings.language)
     }
+    
+    var settings: UtteranceSettings {
+        return UtteranceSettings(rate: rate, pitch: pitch, volume: volume, language: language)
+    }
 }
