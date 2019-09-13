@@ -71,3 +71,7 @@ class EditPlaylistItemController: FormViewController {
         alert.showError("错误!", subTitle: message)
     }
 }
+
+protocol EditPlaylistItemControllerDelegate : class {
+    func didUpdatePlaylistItem(_ item: UtteranceObject)
+}
