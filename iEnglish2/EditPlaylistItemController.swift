@@ -52,6 +52,17 @@ class EditPlaylistItemController: FormViewController {
             dismiss(animated: true, completion: nil)
         }
         
+        let language = detectedLangauge(for: content) ?? "und"
+        if !language.starts(with: "en") && content.count > 25 {
+            let readableLanguage = Locale.current.localizedString(forLanguageCode: language)
+            let alert = SCLAlertView(appearance: SCLAlertView.SCLAppearance(showCloseButton: false))
+            alert.addButton("是", action: saveAndDismiss)
+            alert.addButton("否", action: {})
+            alert.showWarning("貌似不是英语?", subTitle: "你似乎输入了\(readableLanguage ?? language), 是否继续?")
+        } else {
+            saveAndDismiss()
+        }
+        
     }
     
     func showError(_ message: String) {
