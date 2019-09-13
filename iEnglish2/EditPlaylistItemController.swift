@@ -14,12 +14,14 @@ class EditPlaylistItemController: FormViewController {
             
             <<< TextAreaRow(tagContent) {
                 row in
+                row.value = utteranceObject.string
         }
         
         form +++ Section("设置")
             
             <<< UtteranceSettingsRow(tagUtteranceSettings) {
                 row in
+                row.value = utteranceObject.utterance.settings
         }
     }
     
