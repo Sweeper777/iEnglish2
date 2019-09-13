@@ -40,6 +40,18 @@ class EditPlaylistItemController: FormViewController {
             fatalError()
         }
         
+        func saveAndDismiss() {
+            try? RealmWrapper.shared.realm.write {
+                self.utteranceObject.string = content
+                self.utteranceObject.rate = settings.rate
+                self.utteranceObject.pitch = settings.pitch
+                self.utteranceObject.volume = settings.volume
+                self.utteranceObject.language = settings.language
+            }
+            delegate?.didUpdatePlaylistItem(utteranceObject)
+            dismiss(animated: true, completion: nil)
+        }
+        
     }
     
     func showError(_ message: String) {
