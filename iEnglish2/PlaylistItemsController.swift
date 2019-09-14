@@ -71,6 +71,12 @@ class PlaylistItemsController: UITableViewController {
             vc.currentIndex = startingIndex
         }
     }
+    
+    override func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
+        performSegue(withIdentifier: "editPlaylistItem", sender: indexPath.row)
+    }
+    
+    
 }
 
 struct UtteranceSection : AnimatableSectionModelType, IdentifiableType {
