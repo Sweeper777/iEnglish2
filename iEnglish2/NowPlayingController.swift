@@ -115,6 +115,11 @@ class NowPlayingController : UIViewController {
         speechSynthesiser.delegate = self
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        playCurrentUtterance()
+    }
+    
     @objc func previousPressed() {
         guard currentIndex > 0 else { return }
         previous()
