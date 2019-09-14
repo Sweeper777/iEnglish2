@@ -18,7 +18,7 @@ final class UtteranceSettingsCell: Cell<UtteranceSettings>, CellType, UtteranceS
         height = { return 293 }
         utteranceSettingsView.delegate = self
         
-        row.value = utteranceSettingsView.utteranceSettings
+        row.value = row.value ?? utteranceSettingsView.utteranceSettings
     }
     
     override func update() {
