@@ -36,6 +36,7 @@ class PlaylistItemsController: UITableViewController {
             return cell
         })
         datasource.canEditRowAtIndexPath = { _, _ in return true }
+        
         observable.bind(to: tableView.rx.items(dataSource: datasource)).disposed(by: disposeBag)
         
         tableView.rx.itemDeleted.subscribe(onNext: {
@@ -108,6 +109,12 @@ extension PlaylistItemsController : NewPlaylistItemControllerDelegate {
         try? RealmWrapper.shared.realm.write {
             self.playlistObject.items.append(UtteranceObject(from: item))
         }
+        playlist = playlistObject.playlist
+    }
+}
+
+extension PlaylistItemsController : EditPlaylistItemControllerDelegate {
+    func didUpdatePlaylistItem(_ item: UtteranceObject) {
         playlist = playlistObject.playlist
     }
 }
