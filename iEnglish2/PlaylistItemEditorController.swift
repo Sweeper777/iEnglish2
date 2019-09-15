@@ -62,3 +62,8 @@ class PlaylistItemEditorController : FormViewController {
     }
 }
 
+protocol PlaylistItemEditorControllerDelegate : class {
+    func didUpdatePlaylistItem(_ item: UtteranceObject)
+    func didCreatePlaylistItem(_ item: Utterance)
+}
+
