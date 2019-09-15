@@ -23,6 +23,11 @@ class PlaylistItemEditorController : FormViewController {
                 row.value = utteranceObject?.utterance.settings
         }
         
+        if utteranceObject != nil {
+            navigationItem.title = "编辑播放列表项目"
+        } else {
+            navigationItem.title = "新建播放列表项目"
+        }
     }
     
     @IBAction func cancel() {
