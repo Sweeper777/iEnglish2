@@ -40,6 +40,24 @@ class PlaylistItemEditorController : FormViewController {
             fatalError()
         }
         
+        func saveAndDismiss() {
+            guard let utteranceObject = self.utteranceObject else { return }
+            
+            try? RealmWrapper.shared.realm.write {
+                utteranceObject.string = content
+                utteranceObject.rate = settings.rate
+                utteranceObject.pitch = settings.pitch
+                utteranceObject.volume = settings.volume
+                utteranceObject.language = settings.language
+            }
+            delegate?.didUpdatePlaylistItem(utteranceObject)
+            dismiss(animated: true, completion: nil)
+        }
+        
+        func callDelegateAndDismiss() {
+            delegate?.didCreatePlaylistItem(Utterance(string: content, settings: settings))
+            dismiss(animated: true, completion: nil)
+        }
         
         let language = detectedLangauge(for: content) ?? "und"
         if !language.starts(with: "en") && content.count > 25 {
