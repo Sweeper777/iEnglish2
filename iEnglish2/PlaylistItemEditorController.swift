@@ -4,6 +4,7 @@ import SCLAlertView
 
 class PlaylistItemEditorController : FormViewController {
     var utteranceObject: UtteranceObject?
+    weak var delegate: PlaylistItemEditorControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
