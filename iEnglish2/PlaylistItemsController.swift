@@ -104,16 +104,13 @@ struct UtteranceSection : AnimatableSectionModelType, IdentifiableType {
     }
 }
 
-extension PlaylistItemsController : NewPlaylistItemControllerDelegate {
+extension PlaylistItemsController : PlaylistItemEditorControllerDelegate {
     func didCreatePlaylistItem(_ item: Utterance) {
         try? RealmWrapper.shared.realm.write {
             self.playlistObject.items.append(UtteranceObject(from: item))
         }
         playlist = playlistObject.playlist
     }
-}
-
-extension PlaylistItemsController : EditPlaylistItemControllerDelegate {
     func didUpdatePlaylistItem(_ item: UtteranceObject) {
         playlist = playlistObject.playlist
     }
