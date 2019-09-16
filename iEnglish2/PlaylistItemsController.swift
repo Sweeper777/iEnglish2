@@ -65,14 +65,14 @@ class PlaylistItemsController: UITableViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let vc = (segue.destination as? UINavigationController)?.topViewController as? NewPlaylistItemController {
+        if let vc = (segue.destination as? UINavigationController)?.topViewController as? PlaylistItemEditorController,
+            let index = sender as? Int {
+            vc.utteranceObject = playlistObject.items[index]
             vc.delegate = self
         } else if let vc = segue.destination as? NowPlayingController, let startingIndex = sender as? Int {
             vc.playlist = playlist
             vc.currentIndex = startingIndex
-        } else if let vc = (segue.destination as? UINavigationController)?.topViewController as? EditPlaylistItemController,
-                let index = sender as? Int {
-            vc.utteranceObject = playlistObject.items[index]
+        } else if let vc = (segue.destination as? UINavigationController)?.topViewController as? PlaylistItemEditorController {
             vc.delegate = self
         }
     }
