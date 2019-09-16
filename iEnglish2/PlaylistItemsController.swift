@@ -61,7 +61,7 @@ class PlaylistItemsController: UITableViewController {
     }
     
     @IBAction func newPlaylist() {
-        performSegue(withIdentifier: "newPlaylistItem", sender: nil)
+        performSegue(withIdentifier: "showPlaylistItemEditor", sender: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -78,7 +78,7 @@ class PlaylistItemsController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
-        performSegue(withIdentifier: "editPlaylistItem", sender: indexPath.row)
+        performSegue(withIdentifier: "showPlaylistItemEditor", sender: indexPath.row)
     }
     
     
