@@ -93,3 +93,5 @@ protocol PlaylistItemEditorControllerDelegate : class {
     func didCreatePlaylistItem(_ item: Utterance)
 }
 
+let tagContent = "content"
+let tagUtteranceSettings = "settings"
