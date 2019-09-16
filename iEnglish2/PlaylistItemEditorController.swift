@@ -45,7 +45,7 @@ class PlaylistItemEditorController : FormViewController {
             fatalError()
         }
         
-        func saveAndDismiss() {
+        func saveChanges() {
             guard let utteranceObject = self.utteranceObject else { return }
             
             try? RealmWrapper.shared.realm.write {
@@ -59,7 +59,7 @@ class PlaylistItemEditorController : FormViewController {
             dismiss(animated: true, completion: nil)
         }
         
-        func callDelegateAndDismiss() {
+        func newPlaylist() {
             delegate?.didCreatePlaylistItem(Utterance(string: content, settings: settings))
             dismiss(animated: true, completion: nil)
         }
