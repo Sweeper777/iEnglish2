@@ -79,11 +79,7 @@ class PlaylistItemEditorController : FormViewController {
             alert.addButton("否", action: {})
             alert.showWarning("貌似不是英语?", subTitle: "你似乎输入了\(readableLanguage ?? language), 是否继续?")
         } else {
-            if utteranceObject != nil {
-                saveAndDismiss()
-            } else {
-                callDelegateAndDismiss()
-            }
+            close()
         }
         
     }
