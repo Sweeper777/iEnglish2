@@ -56,7 +56,6 @@ class PlaylistItemEditorController : FormViewController {
                 utteranceObject.language = settings.language
             }
             delegate?.didUpdatePlaylistItem(utteranceObject)
-            dismiss(animated: true, completion: nil)
         }
         
         func newPlaylist() {
