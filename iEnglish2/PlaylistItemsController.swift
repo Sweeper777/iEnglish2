@@ -36,6 +36,7 @@ class PlaylistItemsController: UITableViewController {
             return cell
         })
         datasource.canEditRowAtIndexPath = { _, _ in return true }
+        datasource.canMoveRowAtIndexPath =  { _, _ in return true }
         
         observable.bind(to: tableView.rx.items(dataSource: datasource)).disposed(by: disposeBag)
         
@@ -45,6 +46,17 @@ class PlaylistItemsController: UITableViewController {
             let utteranceObjectToDelete = self.playlistObject.items[indexPath.row]
             try? RealmWrapper.shared.realm.write {
                 RealmWrapper.shared.realm.delete(utteranceObjectToDelete)
+            }
+            self.playlist = self.playlistObject.playlist
+        }).disposed(by: disposeBag)
+        
+        tableView.rx.itemMoved.subscribe(onNext: {
+            [weak self] from, to in
+            guard let `self` = self else { return }
+            try? RealmWrapper.shared.realm.write {
+                let utteranceMoved = self.playlistObject.items[from.row]
+                self.playlistObject.items.remove(at: from.row)
+                self.playlistObject.items.insert(utteranceMoved, at: to.row)
             }
             self.playlist = self.playlistObject.playlist
         }).disposed(by: disposeBag)
