@@ -61,6 +61,14 @@ class PlaylistItemEditorController : FormViewController {
         
         func newPlaylist() {
             delegate?.didCreatePlaylistItem(Utterance(string: content, settings: settings))
+        }
+        
+        func close() {
+            if utteranceObject != nil {
+                saveChanges()
+            } else {
+                newPlaylist()
+            }
             dismiss(animated: true, completion: nil)
         }
         
