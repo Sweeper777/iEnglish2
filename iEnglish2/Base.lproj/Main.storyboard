@@ -183,19 +183,19 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="fillEqually" spacing="61" translatesAutoresizingMaskIntoConstraints="NO" id="pYA-Iw-kwp">
-                                            <rect key="frame" x="62" y="423" width="197" height="25"/>
+                                            <rect key="frame" x="62" y="423" width="170" height="22"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MKh-Yq-TKU">
-                                                    <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="16" height="22"/>
                                                     <state key="normal" image="icons8-skip_to_start_filled"/>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LQr-3l-wXX">
-                                                    <rect key="frame" x="86" y="0.0" width="25" height="25"/>
+                                                    <rect key="frame" x="77" y="0.0" width="16" height="22"/>
                                                     <state key="normal" image="icons8-play_filled"/>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K0r-jc-kIH">
-                                                    <rect key="frame" x="172" y="0.0" width="25" height="25"/>
+                                                    <rect key="frame" x="154" y="0.0" width="16" height="22"/>
                                                     <state key="normal" image="icons8-end_filled"/>
                                                 </button>
                                             </subviews>
@@ -220,6 +220,15 @@
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </view>
+                                        <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Xum-J5-BT6">
+                                            <rect key="frame" x="120" y="504" width="80" height="29"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <segments>
+                                                <segment title="-"/>
+                                                <segment title="" image="icons8-repeat_filled"/>
+                                                <segment title="" image="icons8-shuffle_filled"/>
+                                            </segments>
+                                        </segmentedControl>
                                     </subviews>
                                 </view>
                                 <blurEffect style="light"/>
@@ -233,6 +242,7 @@
                         <outlet property="controlButtonsStackView" destination="pYA-Iw-kwp" id="jSU-vX-Jb6"/>
                         <outlet property="nextButton" destination="K0r-jc-kIH" id="76R-ID-5kW"/>
                         <outlet property="playPauseButton" destination="LQr-3l-wXX" id="eYv-bR-gWN"/>
+                        <outlet property="playingModeSegmentedControl" destination="Xum-J5-BT6" id="d8p-DT-a0Q"/>
                         <outlet property="playlistNameLabel" destination="SSV-2W-foX" id="9xQ-mR-mFk"/>
                         <outlet property="previousButton" destination="MKh-Yq-TKU" id="KrO-Ax-ab6"/>
                         <outlet property="utteranceTextView" destination="pkS-3i-WHN" id="EYp-Po-vbg"/>
@@ -258,7 +268,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vGx-Ek-nRc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3874" y="372"/>
+            <point key="canvasLocation" x="3703" y="738"/>
         </scene>
         <!--新播放列表项目-->
         <scene sceneID="lfB-Oe-l9H">
@@ -348,8 +358,10 @@
         <image name="icons8-list" width="25" height="25"/>
         <image name="icons8-list_filled" width="25" height="25"/>
         <image name="icons8-play_filled" width="25" height="25"/>
+        <image name="icons8-repeat_filled" width="100" height="100"/>
         <image name="icons8-room_sound" width="25" height="25"/>
         <image name="icons8-room_sound_filled" width="25" height="25"/>
+        <image name="icons8-shuffle_filled" width="100" height="100"/>
         <image name="icons8-skip_to_start_filled" width="25" height="25"/>
     </resources>
 </document>
