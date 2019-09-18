@@ -212,11 +212,18 @@ extension NowPlayingController : AVSpeechSynthesizerDelegate {
             isManuallyStopping = false
             return
         }
-        if currentIndex >= playlist.items.count - 1 {
-            try? AVAudioSession.sharedInstance().setActive(false)
-            isPlaying = false
-        } else {
-            next()
+        switch playingModeSegmentedControl.selectedSegmentIndex {
+        case 1:
+            playCurrentUtterance()
+        case 2:
+            random()
+        default:
+            if currentIndex >= playlist.items.count - 1 {
+                try? AVAudioSession.sharedInstance().setActive(false)
+                isPlaying = false
+            } else {
+                next()
+            }
         }
     }
     
