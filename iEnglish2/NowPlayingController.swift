@@ -12,6 +12,7 @@ class NowPlayingController : UIViewController {
     @IBOutlet var playPauseButton: UIButton!
     @IBOutlet var nextButton: UIButton!
     @IBOutlet var volumeView: MPVolumeView!
+    @IBOutlet var playingModeSegmentedControl: UISegmentedControl!
     
     var playlist: Playlist!
     var currentIndex = 0 {
