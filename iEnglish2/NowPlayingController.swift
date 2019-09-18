@@ -181,6 +181,11 @@ class NowPlayingController : UIViewController {
         currentIndex -= 1
         playCurrentUtterance()
     }
+    
+    func random() {
+        currentIndex = (currentIndex + Int.random(in: 1..<playlist.items.count)) % playlist.items.count
+        playCurrentUtterance()
+    }
 }
 
 extension NowPlayingController : AVSpeechSynthesizerDelegate {
