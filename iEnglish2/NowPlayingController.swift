@@ -202,13 +202,11 @@ extension NowPlayingController : AVSpeechSynthesizerDelegate {
     }
     
     func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didCancel utterance: AVSpeechUtterance) {
-        print("Cancel!")
         isManuallyStopping = false
         try? AVAudioSession.sharedInstance().setActive(false)
     }
     
     func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didFinish utterance: AVSpeechUtterance) {
-        print("Finish!")
         if isManuallyStopping {
             try? AVAudioSession.sharedInstance().setActive(false)
             isManuallyStopping = false
