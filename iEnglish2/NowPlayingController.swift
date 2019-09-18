@@ -108,6 +108,12 @@ class NowPlayingController : UIViewController {
             make.centerX.equalToSuperview()
             make.top.equalTo(controlButtonsStackView.snp.bottom).offset(14)
         }
+        
+        playingModeSegmentedControl.snp.makeConstraints { (make) in
+            make.centerX.equalToSuperview()
+            make.top.equalTo(volumeView.snp.bottom)
+            make.width.equalTo(80)
+        }
     }
     
     override func viewDidLoad() {
