@@ -23,6 +23,7 @@ class ListenController: UIViewController {
         ]
         keyboardToolbar.sizeToFit()
         textField.inputAccessoryView = keyboardToolbar
+        textField.attributedText = NSAttributedString(string: "")
     }
     
     func play() {
