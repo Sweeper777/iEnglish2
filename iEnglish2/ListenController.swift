@@ -11,6 +11,8 @@ class ListenController: UIViewController {
     @IBOutlet var playButton: PressableButton!
     @IBOutlet var utteranceSettingsView: UtteranceSettingsView!
     
+    let synthesiser = AVSpeechSynthesizer()
+    
     override func viewDidLoad() {
         
         playButton.addTarget(self, action: #selector(playPress), for: .touchUpInside)
@@ -24,7 +26,6 @@ class ListenController: UIViewController {
     }
     
     func play() {
-        let synthesiser = AVSpeechSynthesizer()
         let utterance = Utterance(string: textField.text ?? "", settings: utteranceSettingsView.utteranceSettings).avUtterance
         synthesiser.speak(utterance)
     }
