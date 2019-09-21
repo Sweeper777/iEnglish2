@@ -46,7 +46,7 @@ class NowPlayingController : UIViewController {
         paragraphStyle.alignment = .center
         
         let attributes: [NSAttributedString.Key : Any] = [
-            .font: UIFont.systemFont(ofSize: UIFont.systemFontSize),
+            .font: UIFont.systemFont(ofSize: 16),
             .paragraphStyle: paragraphStyle
         ]
         
