@@ -16,6 +16,8 @@ target 'iEnglish2' do
   pod 'RealmSwift'
   pod 'SwiftyButton'
   pod 'Eureka'
+  pod 'MarqueeLabel'
+  pod 'BetterSegmentedControl'
 
   target 'iEnglish2Tests' do
     inherit! :search_paths
