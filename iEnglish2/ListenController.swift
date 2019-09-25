@@ -12,6 +12,7 @@ class ListenController: UIViewController {
     @IBOutlet var utteranceSettingsView: UtteranceSettingsView!
     
     let synthesiser = AVSpeechSynthesizer()
+    var shouldHighlight = true
     
     override func viewDidLoad() {
         synthesiser.delegate = self
@@ -32,6 +33,8 @@ class ListenController: UIViewController {
     }
     
     @objc func playPress() {
+        view.endEditing(true)
+        shouldHighlight = true
         let language = textField.text.flatMap(detectedLangauge) ?? "und"
         if !language.starts(with: "en") && textField.text!.count > 25 {
             let readableLanguage = Locale.current.localizedString(forLanguageCode: language)
