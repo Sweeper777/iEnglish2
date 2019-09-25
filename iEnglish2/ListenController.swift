@@ -25,6 +25,7 @@ class ListenController: UIViewController {
         keyboardToolbar.sizeToFit()
         textField.inputAccessoryView = keyboardToolbar
         textField.attributedText = NSAttributedString(string: "")
+        textField.delegate = self
     }
     
     func play() {
@@ -50,13 +51,18 @@ class ListenController: UIViewController {
 
 extension ListenController : AVSpeechSynthesizerDelegate {
     func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, willSpeakRangeOfSpeechString characterRange: NSRange, utterance: AVSpeechUtterance) {
-        let attributedString = NSMutableAttributedString(attributedString: textField.attributedText!)
-        attributedString.removeAttribute(NSAttributedString.Key.backgroundColor, range: NSRange(location: 0, length: attributedString.length))
-        attributedString.addAttribute(NSAttributedString.Key.backgroundColor, value: UIColor.yellow, range: characterRange)
-        textField.attributedText = attributedString
     }
     
     func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didFinish utterance: AVSpeechUtterance) {
+        let attributedString = NSMutableAttributedString(attributedString: textField.attributedText!)
+        attributedString.removeAttribute(NSAttributedString.Key.backgroundColor, range: NSRange(location: 0, length: attributedString.length))
+        textField.attributedText = attributedString
+    }
+}
+
+extension ListenController : UITextFieldDelegate {
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        shouldHighlight = false
         let attributedString = NSMutableAttributedString(attributedString: textField.attributedText!)
         attributedString.removeAttribute(NSAttributedString.Key.backgroundColor, range: NSRange(location: 0, length: attributedString.length))
         textField.attributedText = attributedString
