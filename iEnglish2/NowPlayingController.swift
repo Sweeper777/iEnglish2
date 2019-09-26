@@ -52,6 +52,8 @@ class NowPlayingController : UIViewController {
         ]
         
         utteranceTextView?.attributedText = NSAttributedString(string: currentUtterance.string, attributes: attributes)
+        
+        playlistNameLabel?.text = "正在播放: \(playlist.name) 项目 \(currentIndex + 1) / \(playlist.items.count) (点击此处返回)"
     }
     
     private func setupViews() {
