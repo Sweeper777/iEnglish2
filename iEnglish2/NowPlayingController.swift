@@ -68,6 +68,7 @@ class NowPlayingController : UIViewController {
         utteranceTextViewContainer.layer.shadowOffset = .zero
         
         updateTextViewAndLabel()
+        playlistNameLabel.animationDelay = 0
         
         [previousButton!, playPauseButton!, nextButton!].forEach { (button) in
             button.setImage(button.image(for: .normal)?.withRenderingMode(.alwaysTemplate), for: .highlighted)
