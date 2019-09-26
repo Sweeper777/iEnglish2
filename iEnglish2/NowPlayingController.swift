@@ -18,7 +18,7 @@ class NowPlayingController : UIViewController {
     var playlist: Playlist!
     var currentIndex = 0 {
         didSet {
-            updateTextView()
+            updateTextViewAndLabel()
         }
     }
     
@@ -42,7 +42,7 @@ class NowPlayingController : UIViewController {
     
     let speechSynthesiser = AVSpeechSynthesizer()
     
-    private func updateTextView() {
+    private func updateTextViewAndLabel() {
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.alignment = .center
         
@@ -67,8 +67,7 @@ class NowPlayingController : UIViewController {
         utteranceTextViewContainer.layer.shadowOpacity = 1
         utteranceTextViewContainer.layer.shadowOffset = .zero
         
-        updateTextView()
-        playlistNameLabel.text = "正在播放\n\(playlist.name)"
+        updateTextViewAndLabel()
         
         [previousButton!, playPauseButton!, nextButton!].forEach { (button) in
             button.setImage(button.image(for: .normal)?.withRenderingMode(.alwaysTemplate), for: .highlighted)
