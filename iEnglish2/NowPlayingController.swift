@@ -1,10 +1,11 @@
 import UIKit
 import SnapKit
 import MediaPlayer
+import MarqueeLabel
 
 class NowPlayingController : UIViewController {
     @IBOutlet var blur: UIVisualEffectView!
-    @IBOutlet var playlistNameLabel: UILabel!
+    @IBOutlet var playlistNameLabel: MarqueeLabel!
     @IBOutlet var utteranceTextView: UITextView!
     @IBOutlet var utteranceTextViewContainer: UIView!
     @IBOutlet var controlButtonsStackView: UIStackView!
