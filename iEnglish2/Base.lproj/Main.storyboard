@@ -175,10 +175,8 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="正在播放: 我的某个播放列表" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SSV-2W-foX" customClass="MarqueeLabel" customModule="MarqueeLabel">
                                             <rect key="frame" x="8" y="33" width="304" height="34"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <color key="backgroundColor" red="0.63370304404145084" green="0.63370304404145084" blue="0.63370304404145084" alpha="0.40085827464788731" colorSpace="custom" customColorSpace="displayP3"/>
-                                            <string key="text">正在播放
-我的某个播放列表</string>
-                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <color key="backgroundColor" red="0.63370304404145084" green="0.63370304404145084" blue="0.63370304404145084" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                             <userDefinedRuntimeAttributes>
@@ -187,29 +185,6 @@
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                         </label>
-                                        <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="fillEqually" spacing="61" translatesAutoresizingMaskIntoConstraints="NO" id="pYA-Iw-kwp">
-                                            <rect key="frame" x="62" y="423" width="170" height="22"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MKh-Yq-TKU">
-                                                    <rect key="frame" x="0.0" y="0.0" width="16" height="22"/>
-                                                    <state key="normal" image="icons8-skip_to_start_filled"/>
-                                                </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LQr-3l-wXX">
-                                                    <rect key="frame" x="77" y="0.0" width="16" height="22"/>
-                                                    <state key="normal" image="icons8-play_filled"/>
-                                                </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K0r-jc-kIH">
-                                                    <rect key="frame" x="154" y="0.0" width="16" height="22"/>
-                                                    <state key="normal" image="icons8-end_filled"/>
-                                                </button>
-                                            </subviews>
-                                        </stackView>
-                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uFg-aa-rZa" customClass="MPVolumeView" customModule="MediaPlayer">
-                                            <rect key="frame" x="40" y="462" width="240" height="34"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </view>
                                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="osO-uk-RjB">
                                             <rect key="frame" x="40" y="161" width="240" height="240"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -225,15 +200,29 @@
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </view>
-                                        <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Xum-J5-BT6">
-                                            <rect key="frame" x="120" y="504" width="80" height="29"/>
+                                        <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="fillEqually" spacing="61" translatesAutoresizingMaskIntoConstraints="NO" id="pYA-Iw-kwp">
+                                            <rect key="frame" x="24" y="422" width="272" height="50"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <segments>
-                                                <segment title="-"/>
-                                                <segment title="" image="icons8-repeat_filled"/>
-                                                <segment title="" image="icons8-shuffle_filled"/>
-                                            </segments>
-                                        </segmentedControl>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MKh-Yq-TKU">
+                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                    <state key="normal" image="icons8-skip_to_start_filled"/>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LQr-3l-wXX">
+                                                    <rect key="frame" x="111" y="0.0" width="50" height="50"/>
+                                                    <state key="normal" image="icons8-play_filled"/>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K0r-jc-kIH">
+                                                    <rect key="frame" x="222" y="0.0" width="50" height="50"/>
+                                                    <state key="normal" image="icons8-end_filled"/>
+                                                </button>
+                                            </subviews>
+                                        </stackView>
+                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YWm-ff-MYV" customClass="BetterSegmentedControl" customModule="BetterSegmentedControl">
+                                            <rect key="frame" x="40" y="520" width="240" height="40"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </view>
                                     </subviews>
                                 </view>
                                 <blurEffect style="light"/>
@@ -247,12 +236,11 @@
                         <outlet property="controlButtonsStackView" destination="pYA-Iw-kwp" id="jSU-vX-Jb6"/>
                         <outlet property="nextButton" destination="K0r-jc-kIH" id="76R-ID-5kW"/>
                         <outlet property="playPauseButton" destination="LQr-3l-wXX" id="eYv-bR-gWN"/>
-                        <outlet property="playingModeSegmentedControl" destination="Xum-J5-BT6" id="d8p-DT-a0Q"/>
-                        <outlet property="playlistNameLabel" destination="SSV-2W-foX" id="9xQ-mR-mFk"/>
+                        <outlet property="playingModeSegmentedControl" destination="YWm-ff-MYV" id="04H-ag-4rf"/>
+                        <outlet property="playlistNameLabel" destination="SSV-2W-foX" id="WWF-tZ-ZXz"/>
                         <outlet property="previousButton" destination="MKh-Yq-TKU" id="KrO-Ax-ab6"/>
                         <outlet property="utteranceTextView" destination="pkS-3i-WHN" id="EYp-Po-vbg"/>
                         <outlet property="utteranceTextViewContainer" destination="osO-uk-RjB" id="x3b-GM-Xuu"/>
-                        <outlet property="volumeView" destination="uFg-aa-rZa" id="1vu-c1-BQl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vnV-QG-33e" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -362,11 +350,9 @@
         <image name="icons8-end_filled" width="25" height="25"/>
         <image name="icons8-list" width="25" height="25"/>
         <image name="icons8-list_filled" width="25" height="25"/>
-        <image name="icons8-play_filled" width="25" height="25"/>
-        <image name="icons8-repeat_filled" width="100" height="100"/>
+        <image name="icons8-play_filled" width="50" height="50"/>
         <image name="icons8-room_sound" width="25" height="25"/>
         <image name="icons8-room_sound_filled" width="25" height="25"/>
-        <image name="icons8-shuffle_filled" width="100" height="100"/>
         <image name="icons8-skip_to_start_filled" width="25" height="25"/>
     </resources>
 </document>
