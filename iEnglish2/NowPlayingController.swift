@@ -106,6 +106,11 @@ class NowPlayingController : UIViewController {
             make.top.equalTo(utteranceTextViewContainer.snp.bottom).offset(22)
         }
         
+        volumeView = MPVolumeView()
+        volumeView.showsRouteButton = true
+        volumeView.showsVolumeSlider = true
+        view.addSubview(volumeView)
+        
         volumeView.snp.makeConstraints { (make) in
             make.width.equalTo(utteranceTextViewContainer.snp.width)
             make.centerX.equalToSuperview()
