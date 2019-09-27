@@ -245,7 +245,7 @@ extension NowPlayingController : AVSpeechSynthesizerDelegate {
             isManuallyStopping = false
             return
         }
-        switch playingModeSegmentedControl.selectedSegmentIndex {
+        switch playingModeSegmentedControl.index {
         case 1:
             playCurrentUtterance()
         case 2:
