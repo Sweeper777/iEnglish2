@@ -144,6 +144,9 @@ class NowPlayingController : UIViewController {
                 normalIconTintColor: tint,
                 selectedIconTintColor: .white),
         ]
+        playingModeSegmentedControl.backgroundColor = .clear
+        playingModeSegmentedControl.indicatorViewBackgroundColor = tint
+        playingModeSegmentedControl.cornerRadius = 20
     }
     
     override func viewDidLoad() {
