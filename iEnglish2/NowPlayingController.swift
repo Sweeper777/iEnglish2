@@ -122,7 +122,8 @@ class NowPlayingController : UIViewController {
         playingModeSegmentedControl.snp.makeConstraints { (make) in
             make.centerX.equalToSuperview()
             make.top.equalTo(volumeView.snp.bottom)
-            make.width.equalTo(80)
+            make.width.equalTo(180)
+            make.height.equalTo(40)
         }
     }
     
