@@ -2,6 +2,7 @@ import UIKit
 import SnapKit
 import MediaPlayer
 import MarqueeLabel
+import BetterSegmentedControl
 
 class NowPlayingController : UIViewController {
     @IBOutlet var blur: UIVisualEffectView!
@@ -13,7 +14,7 @@ class NowPlayingController : UIViewController {
     @IBOutlet var playPauseButton: UIButton!
     @IBOutlet var nextButton: UIButton!
     @IBOutlet var volumeView: MPVolumeView!
-    @IBOutlet var playingModeSegmentedControl: UISegmentedControl!
+    @IBOutlet var playingModeSegmentedControl: BetterSegmentedControl!
     
     var playlist: Playlist!
     var currentIndex = 0 {
