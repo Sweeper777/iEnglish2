@@ -61,6 +61,7 @@ class NowPlayingController : UIViewController {
         blur.snp.makeConstraints { (make) in
             make.width.equalToSuperview()
             make.height.equalToSuperview()
+            make.center.equalToSuperview()
         }
         utteranceTextViewContainer.layer.masksToBounds = false
         utteranceTextViewContainer.layer.shadowRadius = 5
