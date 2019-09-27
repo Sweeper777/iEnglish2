@@ -125,6 +125,25 @@ class NowPlayingController : UIViewController {
             make.width.equalTo(180)
             make.height.equalTo(40)
         }
+        
+        let tint = self.view.tintColor!
+        playingModeSegmentedControl.segments = [
+            LabelSegment(
+                text: "None",
+                numberOfLines: 0,
+                normalTextColor: tint,
+                selectedTextColor: .white),
+            IconSegment(
+                icon: UIImage(named: "icons8-repeat_filled")!,
+                iconSize: CGSize(width: 25, height: 25),
+                normalIconTintColor: tint,
+                selectedIconTintColor: .white),
+            IconSegment(
+                icon: UIImage(named: "icons8-shuffle_filled")!,
+                iconSize: CGSize(width: 25, height: 25),
+                normalIconTintColor: tint,
+                selectedIconTintColor: .white),
+        ]
     }
     
     override func viewDidLoad() {
