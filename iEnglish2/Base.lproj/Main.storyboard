@@ -237,8 +237,8 @@
                         <outlet property="nextButton" destination="K0r-jc-kIH" id="76R-ID-5kW"/>
                         <outlet property="playPauseButton" destination="LQr-3l-wXX" id="eYv-bR-gWN"/>
                         <outlet property="playingModeSegmentedControl" destination="YWm-ff-MYV" id="04H-ag-4rf"/>
-                        <outlet property="playlistNameLabel" destination="SSV-2W-foX" id="WWF-tZ-ZXz"/>
                         <outlet property="previousButton" destination="MKh-Yq-TKU" id="KrO-Ax-ab6"/>
+                        <outlet property="statusLabel" destination="SSV-2W-foX" id="WWF-tZ-ZXz"/>
                         <outlet property="utteranceTextView" destination="pkS-3i-WHN" id="EYp-Po-vbg"/>
                         <outlet property="utteranceTextViewContainer" destination="osO-uk-RjB" id="x3b-GM-Xuu"/>
                     </connections>

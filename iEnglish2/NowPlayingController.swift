@@ -6,7 +6,7 @@ import BetterSegmentedControl
 
 class NowPlayingController : UIViewController {
     @IBOutlet var blur: UIVisualEffectView!
-    @IBOutlet var playlistNameLabel: MarqueeLabel!
+    @IBOutlet var statusLabel: MarqueeLabel!
     @IBOutlet var utteranceTextView: UITextView!
     @IBOutlet var utteranceTextViewContainer: UIView!
     @IBOutlet var controlButtonsStackView: UIStackView!
@@ -54,7 +54,7 @@ class NowPlayingController : UIViewController {
         
         utteranceTextView?.attributedText = NSAttributedString(string: currentUtterance.string, attributes: attributes)
         
-        playlistNameLabel?.text = "正在播放: \(playlist.name) 项目 \(currentIndex + 1) / \(playlist.items.count) (点击此处返回)"
+        statusLabel?.text = "正在播放: \(playlist.name) 项目 \(currentIndex + 1) / \(playlist.items.count) (点击此处返回)"
     }
     
     private func setupViews() {
@@ -70,7 +70,7 @@ class NowPlayingController : UIViewController {
         utteranceTextViewContainer.layer.shadowOffset = .zero
         
         updateTextViewAndLabel()
-        playlistNameLabel.animationDelay = 0
+        statusLabel.animationDelay = 0
         
         [previousButton!, playPauseButton!, nextButton!].forEach { (button) in
             button.setImage(button.image(for: .normal)?.withRenderingMode(.alwaysTemplate), for: .highlighted)
@@ -81,8 +81,8 @@ class NowPlayingController : UIViewController {
         nextButton.addTarget(self, action: #selector(nextPressed), for: .touchUpInside)
         
         let gestureRecogniser = UITapGestureRecognizer(target: self, action: #selector(backToPlaylist))
-        playlistNameLabel.isUserInteractionEnabled = true
-        playlistNameLabel.addGestureRecognizer(gestureRecogniser)
+        statusLabel.isUserInteractionEnabled = true
+        statusLabel.addGestureRecognizer(gestureRecogniser)
         
         utteranceTextView.snp.makeConstraints { (make) in
             make.center.equalToSuperview()
@@ -96,7 +96,7 @@ class NowPlayingController : UIViewController {
             make.width.equalToSuperview().multipliedBy(0.75)
         }
         
-        playlistNameLabel.snp.makeConstraints { (make) in
+        statusLabel.snp.makeConstraints { (make) in
             make.centerY.equalTo(utteranceTextViewContainer.snp.top).dividedBy(2)
             make.left.equalTo(view.safeAreaInsets.left).offset(8)
             make.right.equalTo(view.safeAreaInsets.right).offset(-8)
