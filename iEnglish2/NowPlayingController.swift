@@ -260,6 +260,12 @@ extension NowPlayingController : AVSpeechSynthesizerDelegate {
         case 1:
             playCurrentUtterance()
         case 2:
+            if currentIndex >= playlist.items.count - 1 {
+                backToStart()
+            } else {
+                next()
+            }
+        case 3:
             random()
         default:
             if currentIndex >= playlist.items.count - 1 {
