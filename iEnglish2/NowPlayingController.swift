@@ -135,6 +135,11 @@ class NowPlayingController : UIViewController {
                 normalTextColor: tint,
                 selectedTextColor: .white),
             IconSegment(
+                icon: UIImage(named: "repeat-single")!,
+                iconSize: CGSize(width: 25, height: 25),
+                normalIconTintColor: tint,
+                selectedIconTintColor: .white),
+            IconSegment(
                 icon: UIImage(named: "icons8-repeat_filled")!,
                 iconSize: CGSize(width: 25, height: 25),
                 normalIconTintColor: tint,
