@@ -97,6 +97,14 @@ class PlaylistController: UITableViewController {
             vc.playlistObject = playlistObject
         }
     }
+    
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        if traitCollection.verticalSizeClass == .regular && traitCollection.horizontalSizeClass == .regular {
+            return .all
+        } else {
+            return .portrait
+        }
+    }
 }
 
 struct PlaylistSection : AnimatableSectionModelType, IdentifiableType {
