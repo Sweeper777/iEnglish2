@@ -26,6 +26,12 @@ class ListenController: UIViewController {
         textField.inputAccessoryView = keyboardToolbar
         textField.attributedText = NSAttributedString(string: "")
         textField.delegate = self
+        
+        utteranceSettingsView.snp.makeConstraints { (make) in
+            make.width.lessThanOrEqualTo(400)
+            make.height.lessThanOrEqualTo(550)
+            make.centerX.equalToSuperview()
+        }
     }
     
     func play() {
