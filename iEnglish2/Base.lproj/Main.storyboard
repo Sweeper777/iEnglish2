@@ -39,10 +39,10 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="yqD-J7-e0i" secondAttribute="bottom" constant="41" id="5ry-ZM-i4S"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="yqD-J7-e0i" secondAttribute="bottom" priority="750" constant="41" id="5ry-ZM-i4S"/>
                             <constraint firstItem="GfZ-nU-eBI" firstAttribute="top" secondItem="Y3z-s4-Nzs" secondAttribute="bottom" constant="16" id="9Jk-SF-r38"/>
-                            <constraint firstItem="yqD-J7-e0i" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="9aL-IC-E8k"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yqD-J7-e0i" secondAttribute="trailing" constant="16" id="Uy7-dl-wMa"/>
+                            <constraint firstItem="yqD-J7-e0i" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" priority="750" constant="16" id="9aL-IC-E8k"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yqD-J7-e0i" secondAttribute="trailing" priority="750" constant="16" id="Uy7-dl-wMa"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Y3z-s4-Nzs" secondAttribute="trailing" constant="16" id="crE-9F-ajB"/>
                             <constraint firstItem="Y3z-s4-Nzs" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="27" id="hhP-Mk-wxm"/>
                             <constraint firstItem="yqD-J7-e0i" firstAttribute="top" secondItem="GfZ-nU-eBI" secondAttribute="bottom" constant="8" id="ky3-iK-ucd"/>
