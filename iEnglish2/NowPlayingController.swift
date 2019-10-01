@@ -166,6 +166,14 @@ class NowPlayingController : UIViewController {
         playCurrentUtterance()
     }
     
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        if traitCollection.verticalSizeClass == .regular && traitCollection.horizontalSizeClass == .regular {
+            return .all
+        } else {
+            return .portrait
+        }
+    }
+    
     @objc func previousPressed() {
         guard currentIndex > 0 else { return }
         previous()
