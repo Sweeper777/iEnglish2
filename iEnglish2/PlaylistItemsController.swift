@@ -93,7 +93,13 @@ class PlaylistItemsController: UITableViewController {
         performSegue(withIdentifier: "showPlaylistItemEditor", sender: indexPath.row)
     }
     
-    
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        if traitCollection.verticalSizeClass == .regular && traitCollection.horizontalSizeClass == .regular {
+            return .all
+        } else {
+            return .portrait
+        }
+    }
 }
 
 struct UtteranceSection : AnimatableSectionModelType, IdentifiableType {
