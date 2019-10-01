@@ -89,6 +89,14 @@ class PlaylistItemEditorController : FormViewController {
         alert.addButton("好", action: {})
         alert.showError("错误!", subTitle: message)
     }
+    
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        if traitCollection.verticalSizeClass == .regular && traitCollection.horizontalSizeClass == .regular {
+            return .all
+        } else {
+            return .portrait
+        }
+    }
 }
 
 protocol PlaylistItemEditorControllerDelegate : class {
