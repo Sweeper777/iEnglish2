@@ -47,6 +47,14 @@ class ListenController: UIViewController {
             play()
         }
     }
+    
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        if traitCollection.verticalSizeClass == .regular && traitCollection.horizontalSizeClass == .regular {
+            return .all
+        } else {
+            return .portrait
+        }
+    }
 }
 
 extension ListenController : AVSpeechSynthesizerDelegate {
