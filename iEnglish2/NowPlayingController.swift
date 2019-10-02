@@ -93,7 +93,7 @@ class NowPlayingController : UIViewController {
         utteranceTextViewContainer.snp.makeConstraints { (make) in
             make.center.equalToSuperview()
             make.height.equalTo(utteranceTextViewContainer.snp.width)
-            make.width.equalToSuperview().multipliedBy(0.75)
+            make.width.equalTo(UIScreen.main.nativeBounds.width / UIScreen.main.nativeScale * 0.61)
         }
         
         statusLabel.snp.makeConstraints { (make) in
