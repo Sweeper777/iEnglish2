@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import iEnglish2
+@testable import YingYingRuEr
 
 class iEnglish2Tests: XCTestCase {
 
