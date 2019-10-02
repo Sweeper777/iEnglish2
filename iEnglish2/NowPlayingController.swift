@@ -103,7 +103,6 @@ class NowPlayingController : UIViewController {
         }
         
         controlButtonsStackView.snp.makeConstraints { (make) in
-            make.width.equalTo(utteranceTextViewContainer.snp.width)
             make.centerX.equalToSuperview()
             make.top.equalTo(utteranceTextViewContainer.snp.bottom).offset(22)
         }
