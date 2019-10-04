@@ -13,13 +13,16 @@
         <!--Listen Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ListenController" customModule="iEnglish2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ListenController" customModule="YingYingRuEr" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="输入点儿英语吧..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y3z-s4-Nzs">
                                 <rect key="frame" x="16" y="91" width="288" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="qMP-D4-mtY"/>
+                                </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -32,7 +35,7 @@
                                 </constraints>
                                 <state key="normal" title="读来听听"/>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yqD-J7-e0i" customClass="UtteranceSettingsView" customModule="iEnglish2" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yqD-J7-e0i" customClass="UtteranceSettingsView" customModule="YingYingRuEr" customModuleProvider="target">
                                 <rect key="frame" x="16" y="199" width="288" height="279"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
@@ -65,7 +68,7 @@
         <!--播放列表-->
         <scene sceneID="cm9-ra-Clh">
             <objects>
-                <tableViewController id="J7Z-uw-tKI" customClass="PlaylistController" customModule="iEnglish2" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="J7Z-uw-tKI" customClass="PlaylistController" customModule="YingYingRuEr" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="6yc-PJ-Oxq">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -112,7 +115,7 @@
         <!--播放列表-->
         <scene sceneID="4y5-c2-cNo">
             <objects>
-                <tableViewController id="IIV-rM-WjO" customClass="PlaylistItemsController" customModule="iEnglish2" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="IIV-rM-WjO" customClass="PlaylistItemsController" customModule="YingYingRuEr" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Vdo-Ka-0Ot">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -160,7 +163,7 @@
         <!--Now Playing Controller-->
         <scene sceneID="Axx-gt-T90">
             <objects>
-                <viewController id="Hbe-o0-WWD" customClass="NowPlayingController" customModule="iEnglish2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Hbe-o0-WWD" customClass="NowPlayingController" customModule="YingYingRuEr" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aIs-xv-K7U">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -189,7 +192,7 @@
                                             <rect key="frame" x="40" y="161" width="240" height="240"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <subviews>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="pkS-3i-WHN" customClass="VerticallyCenteredTextView" customModule="iEnglish2" customModuleProvider="target">
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="pkS-3i-WHN" customClass="VerticallyCenteredTextView" customModule="YingYingRuEr" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="0.0" width="240" height="240"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -205,15 +208,15 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MKh-Yq-TKU">
-                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                    <rect key="frame" x="0.0" y="12.5" width="25" height="25"/>
                                                     <state key="normal" image="icons8-skip_to_start_filled"/>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LQr-3l-wXX">
-                                                    <rect key="frame" x="111" y="0.0" width="50" height="50"/>
+                                                    <rect key="frame" x="86" y="0.0" width="50" height="50"/>
                                                     <state key="normal" image="icons8-play_filled"/>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K0r-jc-kIH">
-                                                    <rect key="frame" x="222" y="0.0" width="50" height="50"/>
+                                                    <rect key="frame" x="197" y="12.5" width="25" height="25"/>
                                                     <state key="normal" image="icons8-end_filled"/>
                                                 </button>
                                             </subviews>
@@ -266,7 +269,7 @@
         <!--新播放列表项目-->
         <scene sceneID="lfB-Oe-l9H">
             <objects>
-                <viewController id="s0D-tn-wHc" customClass="PlaylistItemEditorController" customModule="iEnglish2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="s0D-tn-wHc" customClass="PlaylistItemEditorController" customModule="YingYingRuEr" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="K1j-Tf-a4d">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -307,6 +310,39 @@
             </objects>
             <point key="canvasLocation" x="1065" y="742"/>
         </scene>
+        <!--相机-->
+        <scene sceneID="XwJ-Jr-v9R">
+            <objects>
+                <navigationController id="m68-hB-14k" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="相机" image="icons8-camera" selectedImage="icons8-camera_filled" id="HIo-VI-skM"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Sgf-7Q-xgc">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="nM4-S4-6Sh" kind="relationship" relationship="rootViewController" id="vfC-h8-ecn"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YWJ-4v-hrF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="24" y="1173"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="8S8-Ea-p6K">
+            <objects>
+                <viewController id="nM4-S4-6Sh" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="49E-3E-gb3" customClass="AACameraView" customModule="AACameraView">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="ngC-dZ-s7E"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="e22-CK-wwl"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QKj-Uz-8wF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="23" y="1899"/>
+        </scene>
         <!--读来听听-->
         <scene sceneID="v26-HE-eSb">
             <objects>
@@ -339,6 +375,7 @@
                     <connections>
                         <segue destination="tbq-EX-nZd" kind="relationship" relationship="viewControllers" id="mob-W1-0tV"/>
                         <segue destination="aTp-60-Vqa" kind="relationship" relationship="viewControllers" id="A35-r6-DrB"/>
+                        <segue destination="m68-hB-14k" kind="relationship" relationship="viewControllers" id="iXV-Qy-pgR"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cl4-Hs-2NM" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -347,6 +384,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="icons8-camera" width="25" height="25"/>
+        <image name="icons8-camera_filled" width="25" height="25"/>
         <image name="icons8-end_filled" width="25" height="25"/>
         <image name="icons8-list" width="25" height="25"/>
         <image name="icons8-list_filled" width="25" height="25"/>
