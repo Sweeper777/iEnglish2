@@ -1,6 +1,0 @@
-framework module Pods_iEnglish2Tests {
-  umbrella header "Pods-iEnglish2Tests-umbrella.h"
-
-  export *
-  module * { export * }
-}

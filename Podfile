@@ -1,7 +1,7 @@
 # Uncomment the next line to define a global platform for your project
 # platform :ios, '9.0'
 
-target 'iEnglish2' do
+target 'YingYingRuEr' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
@@ -18,8 +18,12 @@ target 'iEnglish2' do
   pod 'Eureka'
   pod 'MarqueeLabel'
   pod 'BetterSegmentedControl'
+  pod 'Firebase/Core'
+  pod 'Firebase/MLVision'
+  pod 'Firebase/MLVisionTextModel'
+  pod 'AACameraView', :git => 'https://github.com/EngrAhsanAli/AACameraView.git', :commit => '7b81550ada116c3632d7e2218cf1466e0cbd029b'
 
-  target 'iEnglish2Tests' do
+  target 'YingYingRuErTests' do
     inherit! :search_paths
     # Pods for testing
   end
