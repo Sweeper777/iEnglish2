@@ -3,6 +3,9 @@ import AACameraView
 
 class CameraController: UIViewController {
     
+    
+    @IBOutlet var cameraView: AACameraView!
+    
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         cameraView.stopSession()
