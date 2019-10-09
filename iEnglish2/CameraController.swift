@@ -3,6 +3,7 @@ import AACameraView
 
 class CameraController: UIViewController {
     
+    var hasImageBeenCaptured = false
     
     @IBOutlet var cameraTrigger: CameraTrigger!
     
