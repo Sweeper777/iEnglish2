@@ -4,6 +4,8 @@ import AACameraView
 class CameraController: UIViewController {
     
     
+    @IBOutlet var cameraTrigger: CameraTrigger!
+    
     @IBOutlet var cameraView: AACameraView!
     
     override func viewWillDisappear(_ animated: Bool) {
