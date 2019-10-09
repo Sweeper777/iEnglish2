@@ -20,4 +20,13 @@ class CameraController: UIViewController {
             cameraView.startSession()
         }
     }
+    
+    @IBAction func triggerCamera() {
+        if !hasImageBeenCaptured {
+            cameraView.captureImage()
+            hasImageBeenCaptured = true
+            cameraView.stopSession()
+        }
+    }
+    
 }
