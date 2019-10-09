@@ -310,11 +310,11 @@
             </objects>
             <point key="canvasLocation" x="1065" y="742"/>
         </scene>
-        <!--相机-->
+        <!--扫描-->
         <scene sceneID="XwJ-Jr-v9R">
             <objects>
                 <navigationController id="m68-hB-14k" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="相机" image="icons8-camera" selectedImage="icons8-camera_filled" id="HIo-VI-skM"/>
+                    <tabBarItem key="tabBarItem" title="扫描" image="icons8-camera" selectedImage="icons8-camera_filled" id="HIo-VI-skM"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Sgf-7Q-xgc">
                         <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -327,17 +327,49 @@
             </objects>
             <point key="canvasLocation" x="24" y="1173"/>
         </scene>
-        <!--View Controller-->
+        <!--扫描-->
         <scene sceneID="8S8-Ea-p6K">
             <objects>
-                <viewController id="nM4-S4-6Sh" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="49E-3E-gb3" customClass="AACameraView" customModule="AACameraView">
+                <viewController id="nM4-S4-6Sh" customClass="CameraController" customModule="YingYingRuEr" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="49E-3E-gb3">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vsy-1Z-4Ue" customClass="AACameraView" customModule="AACameraView">
+                                <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q1G-E9-lea" customClass="CameraTrigger" customModule="YingYingRuEr" customModuleProvider="target">
+                                <rect key="frame" x="135" y="461" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="2Vi-q7-dwm"/>
+                                    <constraint firstAttribute="height" constant="50" id="CI5-re-nxa"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="triggerCamera" destination="nM4-S4-6Sh" eventType="touchUpInside" id="jcA-wr-AhA"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Q1G-E9-lea" firstAttribute="bottom" secondItem="ngC-dZ-s7E" secondAttribute="bottom" constant="-8" id="ghH-o5-OKJ"/>
+                            <constraint firstItem="Q1G-E9-lea" firstAttribute="centerX" secondItem="49E-3E-gb3" secondAttribute="centerX" id="oTu-C5-Ogl"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ngC-dZ-s7E"/>
                     </view>
-                    <navigationItem key="navigationItem" id="e22-CK-wwl"/>
+                    <navigationItem key="navigationItem" title="扫描" id="e22-CK-wwl">
+                        <barButtonItem key="rightBarButtonItem" title="照片图库" image="icons8-stack_of_photos_filled" id="aHE-3F-Ort">
+                            <connections>
+                                <action selector="photoLibraryPress" destination="nM4-S4-6Sh" id="BkF-YS-kNp"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="cameraTrigger" destination="Q1G-E9-lea" id="7Yn-E3-FTf"/>
+                        <outlet property="cameraView" destination="vsy-1Z-4Ue" id="MMk-Yw-Ada"/>
+                        <segue destination="Ahf-xg-5tA" kind="show" identifier="showResults" id="VKD-5I-fzV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QKj-Uz-8wF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -393,5 +425,6 @@
         <image name="icons8-room_sound" width="25" height="25"/>
         <image name="icons8-room_sound_filled" width="25" height="25"/>
         <image name="icons8-skip_to_start_filled" width="25" height="25"/>
+        <image name="icons8-stack_of_photos_filled" width="25" height="25"/>
     </resources>
 </document>
