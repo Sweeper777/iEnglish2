@@ -10,7 +10,6 @@ class CameraTrigger: UIButton {
     }
     
     override func draw(_ rect: CGRect) {
-        (UIApplication.shared.delegate as? AppDelegate).
         let outerCircle = UIBezierPath(ovalIn: bounds.insetBy(dx: 1.5, dy: 1.5))
         UIColor.white.setStroke()
         outerCircle.lineWidth = 3
