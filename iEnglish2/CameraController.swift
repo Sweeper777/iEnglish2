@@ -30,6 +30,12 @@ class CameraController: UIViewController {
     }
     
     @IBAction func photoLibraryPress() {
+        guard UIImagePickerController.isSourceTypeAvailable(.photoLibrary) else {
+            let alert = UIAlertController(title: "错误", message: "无法查看照片图库", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "确定", style: .default, handler: nil))
+            present(alert, animated: true, completion: nil)
+            return
+        }
         let imagePicker = UIImagePickerController(rootViewController: self)
         imagePicker.delegate = self
         imagePicker.sourceType = .photoLibrary
