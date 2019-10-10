@@ -373,7 +373,51 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QKj-Uz-8wF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="23" y="1899"/>
+            <point key="canvasLocation" x="22.5" y="1898.2394366197184"/>
+        </scene>
+        <!--扫描结果-->
+        <scene sceneID="Eai-1N-oq8">
+            <objects>
+                <tableViewController id="Ahf-xg-5tA" customClass="CameraResultsController" customModule="YingYingRuEr" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="FGj-r1-kKZ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="zoJ-FO-VQN" style="IBUITableViewCellStyleDefault" id="RdD-E9-e3U">
+                                <rect key="frame" x="0.0" y="55.5" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RdD-E9-e3U" id="hur-Q2-nYQ">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zoJ-FO-VQN">
+                                            <rect key="frame" x="16" y="0.0" width="288" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="Ahf-xg-5tA" id="RSr-oo-Jji"/>
+                            <outlet property="delegate" destination="Ahf-xg-5tA" id="KdO-0i-Zsv"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="扫描结果" id="YUg-9C-GXz">
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="add" id="vKQ-Oo-LeF"/>
+                            <barButtonItem systemItem="play" id="507-OA-AE5"/>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PfO-tz-RZw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="801" y="1898"/>
         </scene>
         <!--读来听听-->
         <scene sceneID="v26-HE-eSb">
