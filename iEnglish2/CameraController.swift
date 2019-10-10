@@ -9,6 +9,16 @@ class CameraController: UIViewController {
     
     @IBOutlet var cameraView: AACameraView!
     
+    override func viewDidLoad() {
+        cameraView.response = {
+            [weak self] response in
+            if let image = response as? UIImage {
+                self?.hasImageBeenCaptured = false
+                self?.performSegue(withIdentifier: "showResults", sender: image)
+            }
+        }
+    }
+    
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         cameraView.stopSession()
