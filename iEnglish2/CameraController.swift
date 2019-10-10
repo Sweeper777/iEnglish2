@@ -29,4 +29,11 @@ class CameraController: UIViewController {
         }
     }
     
+    @IBAction func photoLibraryPress() {
+        let imagePicker = UIImagePickerController(rootViewController: self)
+        imagePicker.delegate = self
+        imagePicker.sourceType = .photoLibrary
+        imagePicker.mediaTypes = ["public.image"]
+        present(imagePicker, animated: true, completion: nil)
+    }
 }
