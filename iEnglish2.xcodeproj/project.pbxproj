@@ -20,7 +20,9 @@
 		5A04F3252307AF6E0035F78F /* UtteranceSettingsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A04F3242307AF6E0035F78F /* UtteranceSettingsView.xib */; };
 		5A0BAB612340B529003A34D3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5A0BAB602340B529003A34D3 /* GoogleService-Info.plist */; };
 		5A0BABC82340BA7C003A34D3 /* CameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0BABC72340BA7C003A34D3 /* CameraController.swift */; };
+		5A0D65742349F19C0059408E /* CameraResultsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0D65732349F19C0059408E /* CameraResultsController.swift */; };
 		5A0D6E1C231EDD0400C9C1F1 /* NowPlayingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0D6E1B231EDD0400C9C1F1 /* NowPlayingController.swift */; };
+		5A0EE94B23489C7A00E8A339 /* CameraTrigger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0EE94A23489C7A00E8A339 /* CameraTrigger.swift */; };
 		5A187FFD2323A6EE00EC0898 /* VerticallyCenteredTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A187FFC2323A6EE00EC0898 /* VerticallyCenteredTextView.swift */; };
 		5A1A41E2232CF1E200E11714 /* PlaylistItemEditorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1A41E1232CF1E200E11714 /* PlaylistItemEditorController.swift */; };
 		5A2301F52318BA2D00ECA0A4 /* UtteranceSettingsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2301F42318BA2D00ECA0A4 /* UtteranceSettingsRow.swift */; };
@@ -277,7 +279,9 @@
 		5A0BAB602340B529003A34D3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5A0BAB622340B6D0003A34D3 /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Pods.xcodeproj; path = Pods/Pods.xcodeproj; sourceTree = "<group>"; };
 		5A0BABC72340BA7C003A34D3 /* CameraController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraController.swift; sourceTree = "<group>"; };
+		5A0D65732349F19C0059408E /* CameraResultsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraResultsController.swift; sourceTree = "<group>"; };
 		5A0D6E1B231EDD0400C9C1F1 /* NowPlayingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingController.swift; sourceTree = "<group>"; };
+		5A0EE94A23489C7A00E8A339 /* CameraTrigger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraTrigger.swift; sourceTree = "<group>"; };
 		5A187FFC2323A6EE00EC0898 /* VerticallyCenteredTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticallyCenteredTextView.swift; sourceTree = "<group>"; };
 		5A1A41E1232CF1E200E11714 /* PlaylistItemEditorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistItemEditorController.swift; sourceTree = "<group>"; };
 		5A2301F42318BA2D00ECA0A4 /* UtteranceSettingsRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtteranceSettingsRow.swift; sourceTree = "<group>"; };
@@ -358,12 +362,14 @@
 				5A2301F62318BBC900ECA0A4 /* UtteranceSettingsCell.swift */,
 				5A2301F82318BF7400ECA0A4 /* UtteranceSettingsCell.xib */,
 				5A187FFC2323A6EE00EC0898 /* VerticallyCenteredTextView.swift */,
+				5A0EE94A23489C7A00E8A339 /* CameraTrigger.swift */,
 				5A004A422303A5D500CCF20E /* ListenController.swift */,
 				5AFC75C2230A3D44002FFA6F /* PlaylistController.swift */,
 				5A03FDBD2313745A000BAF99 /* PlaylistItemsController.swift */,
 				5A1A41E1232CF1E200E11714 /* PlaylistItemEditorController.swift */,
 				5A0D6E1B231EDD0400C9C1F1 /* NowPlayingController.swift */,
 				5A0BABC72340BA7C003A34D3 /* CameraController.swift */,
+				5A0D65732349F19C0059408E /* CameraResultsController.swift */,
 				5A004A442303A5D500CCF20E /* Main.storyboard */,
 				5A00745C2304D2A90004C3CF /* Model.swift */,
 				5A04F3202307A0F60035F78F /* LanguageDetector.swift */,
@@ -860,6 +866,8 @@
 				5A03FDBE2313745A000BAF99 /* PlaylistItemsController.swift in Sources */,
 				5A00745D2304D2A90004C3CF /* Model.swift in Sources */,
 				5A004A432303A5D500CCF20E /* ListenController.swift in Sources */,
+				5A0D65742349F19C0059408E /* CameraResultsController.swift in Sources */,
+				5A0EE94B23489C7A00E8A339 /* CameraTrigger.swift in Sources */,
 				5A04F3232307AF370035F78F /* UtteranceSettingsView.swift in Sources */,
 				5AFC75C1230A3C9A002FFA6F /* RealmWrapper.swift in Sources */,
 				5A187FFD2323A6EE00EC0898 /* VerticallyCenteredTextView.swift in Sources */,
