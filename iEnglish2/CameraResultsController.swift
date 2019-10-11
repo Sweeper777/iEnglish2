@@ -29,4 +29,9 @@ class CameraResultsController: UITableViewController {
             }
         }
     }
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell")!
+        cell.textLabel?.text = textBlocks![indexPath.row].text
+        return cell
+    }
 }
