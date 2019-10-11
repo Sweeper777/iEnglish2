@@ -22,6 +22,7 @@ target 'YingYingRuEr' do
   pod 'Firebase/MLVision'
   pod 'Firebase/MLVisionTextModel'
   pod 'AACameraView', :git => 'https://github.com/EngrAhsanAli/AACameraView.git', :commit => '7b81550ada116c3632d7e2218cf1466e0cbd029b'
+  pod 'EZLoadingActivity', :git => 'https://github.com/hons82/EZLoadingActivity.git'
 
   target 'YingYingRuErTests' do
     inherit! :search_paths

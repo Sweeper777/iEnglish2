@@ -4,6 +4,7 @@ PODS:
   - Differentiator (4.0.1)
   - EmptyDataSet-Swift (4.2.0)
   - Eureka (5.0.0)
+  - EZLoadingActivity (1.2)
   - Firebase/Core (6.6.0):
     - Firebase/CoreOnly
     - FirebaseAnalytics (= 6.1.0)
@@ -134,6 +135,7 @@ DEPENDENCIES:
   - BetterSegmentedControl
   - EmptyDataSet-Swift
   - Eureka
+  - EZLoadingActivity (from `https://github.com/hons82/EZLoadingActivity.git`)
   - Firebase/Core
   - Firebase/MLVision
   - Firebase/MLVisionTextModel
@@ -186,6 +188,8 @@ EXTERNAL SOURCES:
   AACameraView:
     :commit: 7b81550ada116c3632d7e2218cf1466e0cbd029b
     :git: https://github.com/EngrAhsanAli/AACameraView.git
+  EZLoadingActivity:
+    :git: https://github.com/hons82/EZLoadingActivity.git
   SCLAlertView:
     :git: https://github.com/vikmeup/SCLAlertView-Swift.git
   SwiftyUtils:
@@ -196,6 +200,9 @@ CHECKOUT OPTIONS:
   AACameraView:
     :commit: 7b81550ada116c3632d7e2218cf1466e0cbd029b
     :git: https://github.com/EngrAhsanAli/AACameraView.git
+  EZLoadingActivity:
+    :commit: 204b413faa8980c957ee3ed3f60ee0ae9db15eab
+    :git: https://github.com/hons82/EZLoadingActivity.git
   SCLAlertView:
     :commit: f76bb0306b4c73523ca64100b0e3f2ad6896cee2
     :git: https://github.com/vikmeup/SCLAlertView-Swift.git
@@ -209,6 +216,7 @@ SPEC CHECKSUMS:
   Differentiator: 886080237d9f87f322641dedbc5be257061b0602
   EmptyDataSet-Swift: 1fa0b35f530a35f852ecb2b53564728b0c300aaf
   Eureka: 0f64f477ec8ef6201c6fec143d60ff5c201cf654
+  EZLoadingActivity: ec679548878807b1f588cce32f6db11697bf8bcc
   Firebase: a2b5951f30ff38fd3b3bdae9c7d340f940fd3c51
   FirebaseAnalytics: 48414ae5cbf6976d8a2f7177e0466540e5ab33ce
   FirebaseCore: 8c9e08bce0c72a3affd83927d8184cf244918bc8
@@ -240,6 +248,6 @@ SPEC CHECKSUMS:
   SwiftyButton: 5b0ef314e9cf61cf8a83e456ddd1ea1f53f30598
   SwiftyUtils: e2c0b1fd674684e1083c894f6a71a64bb9617402
 
-PODFILE CHECKSUM: 6229c4e0321b9ac37eb4e95635c05495202e36d3
+PODFILE CHECKSUM: d174622d88e8a843899274c56d3e180a8dcf4867
 
 COCOAPODS: 1.7.5

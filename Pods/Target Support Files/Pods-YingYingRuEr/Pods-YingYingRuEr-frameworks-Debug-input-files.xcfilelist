@@ -2,6 +2,7 @@ ${PODS_ROOT}/Target Support Files/Pods-YingYingRuEr/Pods-YingYingRuEr-frameworks
 ${BUILT_PRODUCTS_DIR}/AACameraView/AACameraView.framework
 ${BUILT_PRODUCTS_DIR}/BetterSegmentedControl/BetterSegmentedControl.framework
 ${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework
+${BUILT_PRODUCTS_DIR}/EZLoadingActivity/EZLoadingActivity.framework
 ${BUILT_PRODUCTS_DIR}/EmptyDataSet-Swift/EmptyDataSet_Swift.framework
 ${BUILT_PRODUCTS_DIR}/Eureka/Eureka.framework
 ${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework
