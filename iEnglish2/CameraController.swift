@@ -31,6 +31,13 @@ class CameraController: UIViewController {
         }
     }
     
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let vc = segue.destination as? CameraResultsController, let image = sender as? UIImage {
+            vc.image = image
+        }
+    }
+    
     @IBAction func triggerCamera() {
         if !hasImageBeenCaptured {
             cameraView.captureImage()
