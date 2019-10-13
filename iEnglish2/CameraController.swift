@@ -21,7 +21,9 @@ class CameraController: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        cameraView.stopSession()
+        if UIImagePickerController.isCameraDeviceAvailable(.front) || UIImagePickerController.isCameraDeviceAvailable(.rear) {
+            cameraView.stopSession()
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
