@@ -69,7 +69,11 @@ extension CameraController : UIImagePickerControllerDelegate, UINavigationContro
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        picker.dismiss(animated: true, completion: nil)
+        picker.dismiss(animated: true) { [weak self] in
+            if let image = info[.originalImage] as? UIImage {
+                self?.performSegue(withIdentifier: "showResults", sender: image)
+            }
+        }
     }
 }
 
