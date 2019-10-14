@@ -44,7 +44,6 @@ class CameraController: UIViewController {
         if !hasImageBeenCaptured {
             cameraView.captureImage()
             hasImageBeenCaptured = true
-            cameraView.stopSession()
         }
     }
     
