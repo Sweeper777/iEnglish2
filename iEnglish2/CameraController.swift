@@ -55,7 +55,7 @@ class CameraController: UIViewController {
             present(alert, animated: true, completion: nil)
             return
         }
-        let imagePicker = UIImagePickerController(rootViewController: self)
+        let imagePicker = UIImagePickerController()
         imagePicker.delegate = self
         imagePicker.sourceType = .photoLibrary
         imagePicker.mediaTypes = ["public.image"]
