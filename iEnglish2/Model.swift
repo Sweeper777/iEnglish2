@@ -27,6 +27,8 @@ struct UtteranceSettings : Equatable {
     let pitch: Float
     let volume: Float
     let language: String
+    
+    static let `default` = UtteranceSettings(rate: 0.5, pitch: 1, volume: 1, language: "en-GB")
 }
 
 struct Playlist {
