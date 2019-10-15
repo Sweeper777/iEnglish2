@@ -13,6 +13,14 @@ class CameraResultsController: UITableViewController {
     
     var textBlocks: [VisionTextBlock]?
     var textBlocksSet = false
+    var selectedBlockIndices = Set<Int>() {
+        didSet {
+            selectedBlockIndicesRelay.accept(selectedBlockIndices)
+        }
+    }
+    var selectedBlockIndicesRelay: BehaviorRelay<Set<Int>> = BehaviorRelay(value: [])
+    let disposeBag = DisposeBag()
+    
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
