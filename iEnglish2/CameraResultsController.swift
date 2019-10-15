@@ -21,6 +21,11 @@ class CameraResultsController: UITableViewController {
     var selectedBlockIndicesRelay: BehaviorRelay<Set<Int>> = BehaviorRelay(value: [])
     let disposeBag = DisposeBag()
     
+    override func viewDidLoad() {
+        let observable = selectedBlockIndicesRelay.asObservable().map { !$0.isEmpty }
+        observable.bind(to: playButton.rx.isEnabled).disposed(by: disposeBag)
+        observable.bind(to: addButton.rx.isEnabled).disposed(by: disposeBag)
+    }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
