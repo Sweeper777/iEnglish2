@@ -1,8 +1,13 @@
 import UIKit
 import Firebase
 import EZLoadingActivity
+import RxSwift
+import RxCocoa
+import SCLAlertView
 
 class CameraResultsController: UITableViewController {
+    @IBOutlet var playButton: UIBarButtonItem!
+    @IBOutlet var addButton: UIBarButtonItem!
     
     var image: UIImage!
     
