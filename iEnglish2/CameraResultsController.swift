@@ -11,7 +11,7 @@ class CameraResultsController: UITableViewController {
     
     var image: UIImage!
     
-    var textBlocks: [VisionTextBlock]?
+    var textBlocks: [String]?
     var textBlocksSet = false
     var selectedBlockIndices = Set<Int>() {
         didSet {
