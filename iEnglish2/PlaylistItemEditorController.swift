@@ -14,7 +14,11 @@ class PlaylistItemEditorController : FormViewController {
             <<< TextAreaRow(tagContent) {
                 row in
                 row.value = utteranceObject?.string ?? ""
-        }
+            }.cellUpdate({ (cell, row) in
+                if #available(iOS 13.0, *) {
+                    cell.textView.textColor = .label
+                }
+            })
         
         form +++ Section("设置")
             
