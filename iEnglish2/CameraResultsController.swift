@@ -32,6 +32,7 @@ class CameraResultsController: UITableViewController {
         if !textBlocksSet {
             textBlocksSet = true
             EZLoadingActivity.Settings.FailText = "失败!"
+            EZLoadingActivity.Settings.SuccessText = "成功!"
             EZLoadingActivity.show("加载中...", disableUI: true)
             let vision = Vision.vision()
             let textRecognizer = vision.onDeviceTextRecognizer()
