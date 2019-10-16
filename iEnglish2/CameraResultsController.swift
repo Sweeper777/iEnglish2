@@ -103,6 +103,38 @@ class CameraResultsController: UITableViewController {
     }
     
     func addToNewPlaylistPress(action: UIAlertAction) {
+        func validatePlaylistName(_ name: String?) -> Bool {
+            if (name?.trimmed()).isNilOrEmpty {
+                let alert = SCLAlertView(appearance: SCLAlertView.SCLAppearance(showCloseButton: false))
+                alert.addButton("确定", action: {})
+                alert.showWarning("播放列表名不能为空!")
+                return false
+            }
+            let playlistObjects = RealmWrapper.shared.playlists!
+            if playlistObjects.filter(NSPredicate(format: "name == %@", name!)).count > 0 {
+                let alert = SCLAlertView(appearance: SCLAlertView.SCLAppearance(showCloseButton: false))
+                alert.addButton("确定", action: {})
+                alert.showWarning("播放列表名不能重复!")
+                return false
+            }
+            return true
+        }
+        
+        let prompt = SCLAlertView(appearance: SCLAlertView.SCLAppearance(showCloseButton: false))
+        let textfield = prompt.addTextField("播放列表名")
+        prompt.addButton("确定") { [weak self] in
+            guard let `self` = self else { return }
+            guard validatePlaylistName(textfield.text) else { return }
+            let playlist = self.generatePlaylistFromSelectedBlocks()
+            let playlistObject = PlaylistObject(from: playlist)
+            playlistObject.name = textfield.text!
+            try? RealmWrapper.shared.realm.write {
+                RealmWrapper.shared.realm.add(playlistObject)
+            }
+            self.navigationController?.popViewController(animated: true)
+        }
+        prompt.addButton("取消", action: {})
+        prompt.showEdit("输入播放列表名:")
     }
     
     func addToExistingPlaylistPress(action: UIAlertAction) {
