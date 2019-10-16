@@ -86,4 +86,11 @@ class CameraResultsController: UITableViewController {
         performSegue(withIdentifier: "play", sender: generatePlaylistFromSelectedBlocks())
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let vc = segue.destination as? NowPlayingController, let playlist = sender as? Playlist {
+            vc.playlist = playlist
+            vc.currentIndex = 0
+        }
+    }
+    
 }
