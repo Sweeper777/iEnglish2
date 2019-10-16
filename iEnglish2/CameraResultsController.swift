@@ -69,4 +69,10 @@ class CameraResultsController: UITableViewController {
             .checkmark : .none
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedBlockIndices.formSymmetricDifference([indexPath.row])
+        tableView.reloadRows(at: [indexPath], with: .none)
+    }
+    
 }
