@@ -75,4 +75,11 @@ class CameraResultsController: UITableViewController {
         tableView.reloadRows(at: [indexPath], with: .none)
     }
     
+    func generatePlaylistFromSelectedBlocks() -> Playlist {
+        let selectedTexts = selectedBlockIndices.sorted().map { textBlocks![$0] }
+        let utterances = selectedTexts.map(Utterance.init)
+        let playlist = Playlist(items: utterances, name: "扫描结果")
+        return playlist
+    }
+    
 }
