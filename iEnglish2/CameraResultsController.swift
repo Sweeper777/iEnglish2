@@ -63,7 +63,10 @@ class CameraResultsController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell")!
-        cell.textLabel?.text = textBlocks![indexPath.row].text
+        cell.textLabel?.text = textBlocks![indexPath.row]
+        cell.textLabel?.numberOfLines = 0
+        cell.accessoryType = selectedBlockIndices.contains(indexPath.row) ?
+            .checkmark : .none
         return cell
     }
 }
