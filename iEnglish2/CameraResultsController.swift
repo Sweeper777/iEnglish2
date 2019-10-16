@@ -82,4 +82,8 @@ class CameraResultsController: UITableViewController {
         return playlist
     }
     
+    @IBAction func playButtonPress(_ sender: Any) {
+        performSegue(withIdentifier: "play", sender: generatePlaylistFromSelectedBlocks())
+    }
+    
 }
