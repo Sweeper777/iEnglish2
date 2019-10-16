@@ -93,4 +93,18 @@ class CameraResultsController: UITableViewController {
         }
     }
     
+    @IBAction func addButtonPress(_ sender: Any) {
+        let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        actionSheet.addAction(UIAlertAction(title: "加到新播放列表", style: .default, handler: addToNewPlaylistPress(action:)))
+        actionSheet.addAction(UIAlertAction(title: "加到现有的播放列表", style: .default, handler: addToExistingPlaylistPress(action:)))
+        actionSheet.addAction(UIAlertAction(title: "取消", style: .cancel, handler: nil))
+        actionSheet.popoverPresentationController?.barButtonItem = addButton
+        present(actionSheet, animated: true, completion: nil)
+    }
+    
+    func addToNewPlaylistPress(action: UIAlertAction) {
+    }
+    
+    func addToExistingPlaylistPress(action: UIAlertAction) {
+}
 }
