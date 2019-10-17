@@ -59,6 +59,11 @@ class PlaylistController: UITableViewController {
         }).disposed(by: disposeBag)
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        playlists.accept(playlistObjects.map { $0.playlist })
+    }
+    
     @IBAction func addPress() {
         func validatePlaylistName(_ name: String?) -> Bool {
             if (name?.trimmed()).isNilOrEmpty {
