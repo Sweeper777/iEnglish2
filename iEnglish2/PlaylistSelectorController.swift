@@ -8,4 +8,8 @@ class PlaylistSelectorController : UITableViewController {
         playlists = RealmWrapper.shared.playlists
     }
     
+    @IBAction func cancelPress() {
+        dismiss(animated: true, completion: nil)
+    }
+    
 }
