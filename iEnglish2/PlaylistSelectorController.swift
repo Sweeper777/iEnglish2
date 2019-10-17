@@ -3,6 +3,7 @@ import RealmSwift
 
 class PlaylistSelectorController : UITableViewController {
     var playlists: Results<PlaylistObject>!
+    weak var delegate: PlaylistSelectorControllerDelegate?
     
     override func viewDidLoad() {
         playlists = RealmWrapper.shared.playlists
@@ -29,4 +30,8 @@ class PlaylistSelectorController : UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         dismiss(animated: true, completion: nil)
     }
+}
+
+protocol PlaylistSelectorControllerDelegate: class {
+    func didSelect(playlistObject: PlaylistObject)
 }
