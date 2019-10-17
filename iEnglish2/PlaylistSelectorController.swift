@@ -28,6 +28,7 @@ class PlaylistSelectorController : UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        delegate?.didSelect(playlistObject: playlists[indexPath.row])
         dismiss(animated: true, completion: nil)
     }
 }
