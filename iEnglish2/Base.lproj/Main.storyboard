@@ -246,6 +246,66 @@
             </objects>
             <point key="canvasLocation" x="2850" y="1477.8169014084508"/>
         </scene>
+        <!--请选择播放列表-->
+        <scene sceneID="XWq-A3-h40">
+            <objects>
+                <tableViewController id="8Pm-IP-bLV" customClass="PlaylistSelectorController" customModule="YingYingRuEr" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="3Ol-2e-sVy">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="Mah-qn-oii" style="IBUITableViewCellStyleDefault" id="tKO-h2-UUG">
+                                <rect key="frame" x="0.0" y="55.5" width="320" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tKO-h2-UUG" id="zQF-xV-lDZ">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Mah-qn-oii">
+                                            <rect key="frame" x="16" y="0.0" width="288" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="8Pm-IP-bLV" id="cCp-pp-KmQ"/>
+                            <outlet property="delegate" destination="8Pm-IP-bLV" id="SEf-ac-fmq"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="请选择播放列表" id="FQD-7n-2wd">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="TNO-tl-eV3">
+                            <connections>
+                                <action selector="cancelPress" destination="8Pm-IP-bLV" id="l7i-9w-lgF"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sFd-Ux-0zS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2933" y="2277"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="8Dv-bp-TuF">
+            <objects>
+                <navigationController id="MWJ-Em-7zj" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Nl8-pW-ECA">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="8Pm-IP-bLV" kind="relationship" relationship="rootViewController" id="6GP-Pz-gbx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5P6-Wp-YHY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1914" y="2277"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="Aca-1f-E5H">
             <objects>
@@ -422,6 +482,7 @@
                         <outlet property="addButton" destination="vKQ-Oo-LeF" id="4jr-ig-5xh"/>
                         <outlet property="playButton" destination="507-OA-AE5" id="FON-9e-IKU"/>
                         <segue destination="Hbe-o0-WWD" kind="presentation" identifier="play" modalPresentationStyle="overFullScreen" modalTransitionStyle="crossDissolve" id="qIH-CC-Gqj"/>
+                        <segue destination="MWJ-Em-7zj" kind="presentation" identifier="showPlaylistSelector" modalPresentationStyle="formSheet" id="j5C-dg-bGd"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PfO-tz-RZw" userLabel="First Responder" sceneMemberID="firstResponder"/>
