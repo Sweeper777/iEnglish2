@@ -147,4 +147,14 @@ class CameraResultsController: UITableViewController {
         performSegue(withIdentifier: "showPlaylistSelector", sender: nil)
     }
 }
+
+extension CameraResultsController : PlaylistSelectorControllerDelegate {
+    func didSelect(playlistObject: PlaylistObject) {
+        let playlist = generatePlaylistFromSelectedBlocks()
+        let utteranceObjects = playlist.items.map(UtteranceObject.init)
+        try? RealmWrapper.shared.realm.write {
+            playlistObject.items.append(objectsIn: utteranceObjects)
+        }
+        self.navigationController?.popViewController(animated: true)
+    }
 }
