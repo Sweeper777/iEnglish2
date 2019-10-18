@@ -138,5 +138,13 @@ class CameraResultsController: UITableViewController {
     }
     
     func addToExistingPlaylistPress(action: UIAlertAction) {
+        if RealmWrapper.shared.playlists.isEmpty {
+            let alert = SCLAlertView(appearance: SCLAlertView.SCLAppearance(showCloseButton: false))
+            alert.addButton("确定", action: {})
+            alert.showError("错误", subTitle: "你没有任何播放列表!")
+            return
+        }
+        performSegue(withIdentifier: "showPlaylistSelector", sender: nil)
+    }
 }
 }
