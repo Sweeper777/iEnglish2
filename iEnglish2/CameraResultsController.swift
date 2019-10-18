@@ -42,7 +42,7 @@ class CameraResultsController: UITableViewController {
                     EZLoadingActivity.hide(false, animated: true)
                     return
                 }
-                self?.textBlocks = result.blocks
+                self?.textBlocks = result.blocks.map { $0.text.replacingOccurrences(of: "\n", with: " ") }
                 EZLoadingActivity.hide(true, animated: true)
                 self?.tableView.reloadData()
             }
