@@ -14,6 +14,7 @@
 		5A004A4B2303A5D600CCF20E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A004A492303A5D600CCF20E /* LaunchScreen.storyboard */; };
 		5A004A562303A5D700CCF20E /* iEnglish2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A004A552303A5D700CCF20E /* iEnglish2Tests.swift */; };
 		5A00745D2304D2A90004C3CF /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A00745C2304D2A90004C3CF /* Model.swift */; };
+		5A021E18235327A0003E9815 /* PlaylistSelectorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A021E17235327A0003E9815 /* PlaylistSelectorController.swift */; };
 		5A03FDBE2313745A000BAF99 /* PlaylistItemsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A03FDBD2313745A000BAF99 /* PlaylistItemsController.swift */; };
 		5A04F3212307A0F60035F78F /* LanguageDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A04F3202307A0F60035F78F /* LanguageDetector.swift */; };
 		5A04F3232307AF370035F78F /* UtteranceSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A04F3222307AF370035F78F /* UtteranceSettingsView.swift */; };
@@ -41,6 +42,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 5A004A3C2303A5D500CCF20E;
 			remoteInfo = iEnglish2;
+		};
+		5A021E40235327A0003E9815 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5A0BAB622340B6D0003A34D3 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2D52F026039D6DAE00B441E89D5DF20A;
+			remoteInfo = EZLoadingActivity;
 		};
 		5A0BAB8A2340B6D0003A34D3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -272,6 +280,7 @@
 		5A004A552303A5D700CCF20E /* iEnglish2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iEnglish2Tests.swift; sourceTree = "<group>"; };
 		5A004A572303A5D700CCF20E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A00745C2304D2A90004C3CF /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		5A021E17235327A0003E9815 /* PlaylistSelectorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistSelectorController.swift; sourceTree = "<group>"; };
 		5A03FDBD2313745A000BAF99 /* PlaylistItemsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistItemsController.swift; sourceTree = "<group>"; };
 		5A04F3202307A0F60035F78F /* LanguageDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageDetector.swift; sourceTree = "<group>"; };
 		5A04F3222307AF370035F78F /* UtteranceSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtteranceSettingsView.swift; sourceTree = "<group>"; };
@@ -370,6 +379,7 @@
 				5A0D6E1B231EDD0400C9C1F1 /* NowPlayingController.swift */,
 				5A0BABC72340BA7C003A34D3 /* CameraController.swift */,
 				5A0D65732349F19C0059408E /* CameraResultsController.swift */,
+				5A021E17235327A0003E9815 /* PlaylistSelectorController.swift */,
 				5A004A442303A5D500CCF20E /* Main.storyboard */,
 				5A00745C2304D2A90004C3CF /* Model.swift */,
 				5A04F3202307A0F60035F78F /* LanguageDetector.swift */,
@@ -398,6 +408,7 @@
 				5A0BAB8D2340B6D0003A34D3 /* Differentiator.framework */,
 				5A0BAB8F2340B6D0003A34D3 /* EmptyDataSet_Swift.framework */,
 				5A0BAB912340B6D0003A34D3 /* Eureka.framework */,
+				5A021E41235327A0003E9815 /* EZLoadingActivity.framework */,
 				5A0BAB932340B6D0003A34D3 /* FirebaseCore.framework */,
 				5A0BAB952340B6D0003A34D3 /* FirebaseCoreDiagnostics.framework */,
 				5A0BAB972340B6D0003A34D3 /* FirebaseInstanceID.framework */,
@@ -538,6 +549,13 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		5A021E41235327A0003E9815 /* EZLoadingActivity.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = EZLoadingActivity.framework;
+			remoteRef = 5A021E40235327A0003E9815 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		5A0BAB8B2340B6D0003A34D3 /* BetterSegmentedControl.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
@@ -859,6 +877,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A021E18235327A0003E9815 /* PlaylistSelectorController.swift in Sources */,
 				5A1A41E2232CF1E200E11714 /* PlaylistItemEditorController.swift in Sources */,
 				5A0D6E1C231EDD0400C9C1F1 /* NowPlayingController.swift in Sources */,
 				5A0BABC82340BA7C003A34D3 /* CameraController.swift in Sources */,
