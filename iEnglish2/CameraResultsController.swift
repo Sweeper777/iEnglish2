@@ -91,6 +91,9 @@ class CameraResultsController: UITableViewController {
             vc.playlist = playlist
             vc.currentIndex = 0
         }
+        if let vc = (segue.destination as? UINavigationController)?.topViewController as? PlaylistSelectorController {
+            vc.delegate = self
+        }
     }
     
     @IBAction func addButtonPress(_ sender: Any) {
