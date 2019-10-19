@@ -57,6 +57,12 @@ class PlaylistController: UITableViewController {
             guard let index = self?.playlists.value.firstIndex(of: playlist) else { return }
             self?.performSegue(withIdentifier: "showPlaylist", sender: self?.playlistObjects[index])
         }).disposed(by: disposeBag)
+        
+        playlists.asObservable()
+            .map { $0.isEmpty }
+            .distinctUntilChanged()
+            .subscribe(onNext: { [weak self] _ in self?.tableView.reloadEmptyDataSet() })
+            .disposed(by: disposeBag)
     }
     
     override func viewDidAppear(_ animated: Bool) {
