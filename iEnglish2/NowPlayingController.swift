@@ -237,6 +237,11 @@ class NowPlayingController : UIViewController {
         currentIndex = 0
         playCurrentUtterance()
     }
+    
+    func goToLast() {
+        currentIndex = playlist.items.count - 1
+        playCurrentUtterance()
+    }
 }
 
 extension NowPlayingController : AVSpeechSynthesizerDelegate {
