@@ -174,12 +174,22 @@ class NowPlayingController : UIViewController {
     }
     
     @objc func previousPressed() {
-        guard currentIndex > 0 else { return }
+        guard currentIndex > 0 else {
+            if playingModeSegmentedControl.index == 2 {
+                goToLast()
+            }
+            return
+        }
         previous()
     }
     
     @objc func nextPressed() {
-        guard currentIndex < playlist.items.count - 1 else { return }
+        guard currentIndex < playlist.items.count - 1 else {
+            if playingModeSegmentedControl.index == 2 {
+                backToStart()
+            }
+            return
+        }
         next()
     }
     
