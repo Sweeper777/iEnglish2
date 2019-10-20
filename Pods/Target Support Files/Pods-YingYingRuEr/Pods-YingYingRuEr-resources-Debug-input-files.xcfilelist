@@ -1,2 +1,2 @@
 ${PODS_ROOT}/Target Support Files/Pods-YingYingRuEr/Pods-YingYingRuEr-resources.sh
-${PODS_CONFIGURATION_BUILD_DIR}/GoogleMobileVision/GoogleMVTextDetectorResources.bundle
+${PODS_CONFIGURATION_BUILD_DIR}/FirebaseMLVisionTextModel/GoogleMVTextDetectorResources.bundle

@@ -1819,10 +1819,6 @@ Copyright 2019 Google
    limitations under the License.
 
 
-## GoogleMobileVision
-
-Copyright 2019 Google
-
 ## GoogleToolboxForMac
 
 
