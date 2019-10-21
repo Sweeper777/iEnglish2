@@ -89,6 +89,8 @@ class PlaylistController: UITableViewController {
         
         let prompt = SCLAlertView(appearance: SCLAlertView.SCLAppearance(showCloseButton: false))
         let textfield = prompt.addTextField("播放列表名")
+        textfield.backgroundColor = .white
+        textfield.textColor = .black
         prompt.addButton("确定") { [weak self] in
             guard let `self` = self else { return }
             guard validatePlaylistName(textfield.text) else { return }
